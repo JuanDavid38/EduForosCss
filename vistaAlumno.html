@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista administrador</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>Sección Administrador</h2>
+        <button id="toggleMenu">☰</button>
+        <div style="display: flex; margin-right: 30px;" id="iconContainer">
+            <div class="user-icon" id="userIcon">
+                <img src="images/persona.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;"><div class="dropdown-content" id="dropdownContent">
+                    <a href="#">Mi perfil</a>
+                    <a href="#">Cerrar sesión</a>
+                </div>
+            </div>
+            <!-- <div class="notification-icon">
+                <img src="images/campana.png" alt="Icono de campana" style="width: 40px; height: 40px; border-radius: 50%;">
+            </div> -->
+        </div>
+    </header>
+    
+    
+    <!-- <div id="userMenu" style="display: none;">
+        <ul>
+            <li>Opción 1</li>
+            <li>Opción 2</li>
+            <li>Opción 3</li>
+        </ul>
+    </div> -->
+    <aside id="menu">
+        <h2>Menú</h2>
+        <ul>
+           
+            <li><a id="curso_asignado_estudiante">Cursos asignado</a>
+                <div class="submenu">
+                    <a id="ver_curso_estudiante">ver curso</a><br><br>
+                    <!-- <a href="#">Mostrar cursos</a> -->
+                </div>
+            </li>
+            <li><a id="videoconferencias_estudiante">Videoconferencias</a>
+                <div class="submenu">
+                    <a id="ver_videoconferencia_estudiante">ver videoconferencias</a><br><br>
+                </div>
+            </li>
+        </ul>
+    </aside>
+    <main>
+      
+        <!-- <section>
+            <h2>Otra Sección</h2>
+            <p>Contenido de otra sección...</p>
+        </section> -->
+    </main>
+    
+    <!-- <footer>
+        <p>Derechos de autor &copy; 2024 - Nombre de tu empresa</p>
+    </footer> -->
+
+</body>
+</html>

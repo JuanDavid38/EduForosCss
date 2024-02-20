@@ -1,0 +1,216 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    flex: 1; /* El contenido principal ocupará el espacio restante */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+/* Estilos específicos */
+aside {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 200px; /* Ancho del menú lateral */
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 70px;
+}
+
+aside ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries para hacer los estilos responsive */
+
+/* Para pantallas más pequeñas, cambiamos el diseño a uno de columnas */
+@media only screen and (max-width: 768px) {
+    .panel {
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* 
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.carousel-item img {
+    width: 100%;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+} */
+
+
+/* Estilos para el menú */
+/* #menu {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 200px;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    z-index: 1000;
+    display: none;
+} */
+
+#menu.active {
+    display: block;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu li {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 0 4px 4px 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#menu li:hover .submenu {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: -20px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+#card-container {
+    display: flex; /* Usa Flexbox */
+    flex-wrap: wrap; /* Envuelve las cartas cuando no haya suficiente espacio */
+    justify-content: center; /* Centra las cartas horizontalmente */
+}
+.card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px;
+    padding: 20px;
+}
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 16px;
+    color: #666;
+}
