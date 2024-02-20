@@ -6,6 +6,10 @@
     <title>Vista administrador</title>
     <link rel="stylesheet" href="styles.css">
     <script src="main.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/6be6f14cdc.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header style="display: flex; justify-content: space-between; align-items: center;">
@@ -35,34 +39,30 @@
     <aside id="menu">
         <h2>Menú</h2>
         <ul>
-            <li><a href="#">Usuarios</a>
+           
+            <li><a id="#">Cursos asignado</a>
                 <div class="submenu">
-                    <a href="#">Registrar usuarios</a><br><br>
-                    <a href="#">Mostrar profesores</a><br><br>
-                    <a href="#">Mostrar Administradores</a>
+                    <a id="ver_curso_estudiante">ver curso</a><br><br>
+                    <!-- <a href="#">Mostrar cursos</a> -->
                 </div>
             </li>
-            <li><a href="#">Cursos</a>
+            <li><a id="#">Videoconferencias</a>
                 <div class="submenu">
-                    <a href="#">Registrar cursos</a><br><br>
-                    <a href="#">Mostrar cursos</a>
+                    <a id="ver_videoconferencia_estudiante">ver videoconferencias</a><br><br>
                 </div>
             </li>
-            <li><a href="#">Asignaturas</a>
-                <div class="submenu">
-                    <a href="#">Registrar asignaturas</a><br><br>
-                    <a href="#">Mostrar asignaturas</a><br><br>
-                </div>
-            </li>
-            
         </ul>
     </aside>
     <main>
-        
+      
         <!-- <section>
             <h2>Otra Sección</h2>
             <p>Contenido de otra sección...</p>
         </section> -->
+        <div id="listado_cursos_asignados_estudiantes"></div>
+        <div id="listado_conferencias_asignados_estudiantes"></div>
+
+
     </main>
     
     <!-- <footer>
