@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista administrador</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/6be6f14cdc.js" crossorigin="anonymous"></script>
+    <script src='main.js'></script>
+</head>
+<body>
+    <header style="display: flex; justify-content: space-between; align-items: center;">
+        <h2>Sección Administrador</h2>
+        <button id="toggleMenu">☰</button>
+        <div style="display: flex; margin-right: 30px;" id="iconContainer">
+            <div class="user-icon" id="userIcon">
+                <img src="images/persona.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;"><div class="dropdown-content" id="dropdownContent">
+                    <a href="#">Mi perfil</a>
+                    <a href="#">Cerrar sesión</a>
+                </div>
+            </div>
+            <!-- <div class="notification-icon">
+                <img src="images/campana.png" alt="Icono de campana" style="width: 40px; height: 40px; border-radius: 50%;">
+            </div> -->
+        </div>
+    </header>
+    
+    <aside id="menu">
+        <h2 id="Texto">Menú</h2>
+        <ul>
+            <li><a href="#">Foro</a>
+                <div class="submenu">
+                    <a id="crear_foro">Crear foro</a><br><br>
+                    <a id="mostrar_foro">Mostrar foro</a><br><br>
+                </div>
+            </li>
+            <li><a href="cursos_asignados_docente">Cursos asignados</a>
+                <div class="submenu">
+                    <!-- <a href="#">Registrar cursos</a><br><br> -->
+                    <a href="#">Mostrar cursos</a>
+                </div>
+            </li>
+            <li><a href="asignaturas_asignados_docente">Asignaturas asignadas</a>
+                <div class="submenu">
+                    <!-- <a href="#">Registrar asignaturas</a><br><br> -->
+                    <a href="#">Mostrar asignaturas</a><br><br>
+                </div>
+            </li>
+            <li><a href="#">Videoconferencias</a>
+                <div class="submenu">
+                    <a id="crear_videoconferencias">crear videoconferencia en jitsi</a><br><br>
+                    <a id="programar_videoconferencias">Programar videoconferencia</a><br><br>
+                    <a id="mostrar_videoconferencias">Mostrar videoconferencia</a><br><br>
+                    
+                </div>
+            </li>
+        </ul>
+    </aside>
+    <main>
+      
+        <!-- <section>
+            <h2>Otra Sección</h2>
+            <p>Contenido de otra sección...</p>
+        </section> -->
+        <div id="card-container"></div>
+        <div id="card-container_cursos"></div>
+        <div id="card-container_asignaturas"></div>
+        <div id="card-container_videoconferencias"></div>
+
+
+    </main>
+    
+    <!-- <footer>
+        <p>Derechos de autor &copy; 2024 - Nombre de tu empresa</p>
+    </footer> -->
+
+    <form id="formulario_crear_foro" class="bg-white px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+            <div class="grid grid-flow-row sm:grid-flow-col gap-3">
+                <div class="sm:col-span-4 justify-center">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="asignatura"> Asignatura </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="asignatura" type="text" placeholder="" required>
+                </div>
+                <div class="sm:col-span-4 justify-center">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="curso"> Curso </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="curso" type="email" placeholder="" required>
+                </div>
+            </div>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="titulo"> Título </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="titulo" type="text" placeholder="" required>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="fecha_inicio"> Fecha de Inicio </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="fecha_inicio" type="text" placeholder="" required>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="fecha_fin"> Fecha de Fin </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="fecha_fin" type="text" placeholder="" required>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="calificable"> Calificable </label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="calificable" type="text" placeholder="" required>
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="mensaje"> Mensaje </label>
+            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="mensaje" rows="5" placeholder="" required></textarea>
+        </div>
+        <div class="flex items-center justify-between">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit"> Crear </button>
+        </div>
+    </form>
+
+    
+</body>
+</html>
