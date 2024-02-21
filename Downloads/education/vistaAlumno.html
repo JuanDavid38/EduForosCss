@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vista administrador</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
+    <script src="seccionAlumnos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -14,10 +14,9 @@
 <body>
     <header style="display: flex; justify-content: space-between; align-items: center;">
         <h2>Sección Administrador</h2>
-        <button id="toggleMenu">☰</button>
         <div style="display: flex; margin-right: 30px;" id="iconContainer">
             <div class="user-icon" id="userIcon">
-                <img src="images/persona.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;"><div class="dropdown-content" id="dropdownContent">
+                <img src="img/vector.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;"><div class="dropdown-content" id="dropdownContent">
                     <a href="#">Mi perfil</a>
                     <a href="#">Cerrar sesión</a>
                 </div>
@@ -59,10 +58,30 @@
             <h2>Otra Sección</h2>
             <p>Contenido de otra sección...</p>
         </section> -->
-        <div id="listado_cursos_asignados_estudiantes"></div>
-        <div id="listado_conferencias_asignados_estudiantes"></div>
+       
 
+        <div id="cursos_asignados_cards">
+            <!-- Las cartas se agregarán aquí dinámicamente -->
+            <div class="card">
+                <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+                <h2>Curso</h2><br>
+                <p>1001</p><br>
+                <button class="button">Visualizar</button>
+                  </div>
+            
+        </div>
 
+        <div id="cursos_videoconferencias_cards">
+            <!-- Las cartas se agregarán aquí dinámicamente -->
+            <div class="card">
+                <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+                <h2>Videollamada1</h2><br>
+                <p>Videollamada...</p><br>
+                <button class="button">Ingresar</button>
+                </div>
+               
+            </div>
+                
     </main>
     
     <!-- <footer>

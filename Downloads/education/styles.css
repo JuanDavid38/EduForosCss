@@ -188,11 +188,16 @@ aside ul li a:hover {
     background-color: #f1f1f1;
 }
 
-#card-container {
+#cont_card,#cursos_asignados_cards,#cursos_videoconferencias_cards {
     display: flex; /* Usa Flexbox */
     flex-wrap: wrap; /* Envuelve las cartas cuando no haya suficiente espacio */
     justify-content: center; /* Centra las cartas horizontalmente */
+    max-width: 1300px; /* Establece el ancho máximo del contenedor */
+    margin: -280px auto 0; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Agrega un poco de espacio alrededor del contenedor */
+    margin-left: 420px; /* Mueve el contenedor un poco a la derecha */
 }
+
 .card {
     width: 300px;
     background-color: #fff;
@@ -200,6 +205,7 @@ aside ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 40px;
     padding: 20px;
+    flex: 0 0 calc(33.33% - 80px); /* Ajusta el ancho de cada carta para que quepan tres en una fila con margen */
 }
 .card img {
     width: 100%;
@@ -224,3 +230,113 @@ aside ul li a:hover {
     padding: 20px; /* Añade relleno */
     box-sizing: border-box; /* Incluye el relleno y el borde en el tamaño total */
   }
+
+/* Estilo base del botón */
+button {
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 5px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilo cuando se pasa el cursor sobre el botón */
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilo cuando se presiona el botón */
+button:active {
+    transform: translateY(1px);
+}
+  
+/* estilos modal administrador vboton visualizar*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close,.closeModalEdit,.closeModalEstudianteCurso {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  #img_modal{
+    width: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+/* formulario de las cartas */
+  #formulario_visualizar_usuario {
+    max-width: 1000px; /* Reducir el ancho máximo del formulario */
+    margin-left: 380px;
+    padding: 20px; /* Añadir un poco de espacio alrededor del formulario */
+    margin-top: -400px;
+}
+
+#formulario_visualizar_usuario .mb-4 {
+    margin-bottom: 10px; /* Reducir el espacio entre cada campo del formulario */
+}
+
+#formulario_visualizar_usuario .block {
+    margin-bottom: 5px; /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
+}
+
+#formulario_visualizar_usuario .rounded {
+    border-radius: 4px; /* Redondear los bordes de los campos de entrada */
+}
+
+
+/* formulario de registro usuarios */
+#formulario_registro_usuarios {
+    margin-top: -380px;
+    margin-left: 200px;
+}
+
+/* formulario de registro cursos */
+#formulario_crear_curso {
+    margin-top: -500px;
+    margin-left: 200px;
+}
+/* formulario de registro asignatura */
+#formulario_crear_Asignatura {
+    margin-top: -200px;
+    margin-left: 200px;
+}
+

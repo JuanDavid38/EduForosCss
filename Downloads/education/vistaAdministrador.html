@@ -1,175 +1,655 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista administrador</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://kit.fontawesome.com/6be6f14cdc.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vista administrador</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/6be6f14cdc.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
-    <header style="display: flex; justify-content: space-between; align-items: center;">
-        <h2>Sección Administrador</h2>
-        <button id="toggleMenu">☰</button>
-        <div style="display: flex; margin-right: 30px;" id="iconContainer">
-            <div class="user-icon" id="userIcon">
-                <img src="images/persona.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;"><div class="dropdown-content" id="dropdownContent">
-                    <a href="#">Mi perfil</a>
-                    <a href="#">Cerrar sesión</a>
-                </div>
-            </div>
-            <!-- <div class="notification-icon">
+  <header style="display: flex; justify-content: space-between; align-items: center;">
+    <h2>Sección Administrador</h2>
+    <div style="display: flex; margin-right: 30px;" id="iconContainer">
+      <div class="user-icon" id="userIcon">
+        <img
+          src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.vecteezy.com%2Fvectores-gratis%2Fpersona-explicando&psig=AOvVaw1D12FvbiG-bJ9VFcwQSKCq&ust=1708557035736000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPCLlIOFu4QDFQAAAAAdAAAAABAE"
+          alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;">
+        <div class="dropdown-content" id="dropdownContent">
+          <a href="#">Mi perfil</a>
+          <a href="#">Cerrar sesión</a>
+        </div>
+      </div>
+      <!-- <div class="notification-icon">
                 <img src="images/campana.png" alt="Icono de campana" style="width: 40px; height: 40px; border-radius: 50%;">
             </div> -->
-        </div>
-    </header>
-    
-    
-    <!-- <div id="userMenu" style="display: none;">
+    </div>
+  </header>
+
+
+  <!-- <div id="userMenu" style="display: none;">
         <ul>
             <li>Opción 1</li>
             <li>Opción 2</li>
             <li>Opción 3</li>
         </ul>
     </div> -->
-    <aside id="menu">
-        <h2>Menú</h2>
-        <ul>
-            <li><a >Usuarios</a>
-                <div class="submenu">
-                    <a id="Registrar_usuarios">Registrar usuarios</a><br><br>
-                    <a id="Mostrar_docentes">Mostrar profesores</a><br><br>
-                    <a id="Mostrar_administradores">Mostrar Administradores</a>
+  <aside id="menu">
+    <h2>Menú</h2>
+    <ul>
+      <li><a>Usuarios</a>
+        <div class="submenu">
+          <a id="Registrar_usuarios">Registrar usuarios</a><br><br>
+          <a id="Mostrar_docentes">Mostrar profesores</a><br><br>
+          <a id="Mostrar_administradores">Mostrar Administradores</a>
+        </div>
+      </li>
+      <li><a>Cursos</a>
+        <div class="submenu">
+          <a id="registrar_cursos">Registrar cursos</a><br><br>
+          <a id="Mostrar_cursos">Mostrar cursos</a>
+        </div>
+      </li>
+      <li><a>Asignaturas</a>
+        <div class="submenu">
+          <a id="Registrar_Asignaturas">Registrar asignaturas</a><br><br>
+          <a id="Mostrar_asignaturas">Mostrar asignaturas</a><br><br>
+        </div>
+      </li>
+
+    </ul>
+  </aside>
+
+  <div id="cont_card">
+    <!-- Las cartas se agregarán aquí dinámicamente -->
+    <div class="card">
+      <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+      <h2>TÍTULO_DE_LA_CARTA</h2><br>
+      <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
+      <button class="button">Visualizar</button>
+      <button class="button">Editar</button>
+      <button class="button">Eliminar</button>
+
+    </div>
+    <div class="card">
+      <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+      <h2>TÍTULO_DE_LA_CARTA</h2><br>
+      <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
+      <button class="button">Visualizar</button>
+      <button class="button">Editar</button>
+      <button class="button">Eliminar</button>
+
+    </div>
+    <div class="card">
+      <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+      <h2>Estudiante</h2><br>
+      <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
+      <!-- <button class="button">Visualizar</button> -->
+      <button id="buttonVisualizar">Visualizar</button>
+
+      <!-- The Modal -->
+      <div id="modalVisualizar" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <img id="img_modal" src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+          <h2>Estudiante</h2><br>
+          <p>Grado</p><br>
+          <form id="formulario_visualizar_usuario" class="bg-white px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_documento">
+                      Tipo de documento </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="tipo_documento" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="numero_documento"> Número de
+                      documento </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="numero_documento" type="email" placeholder="" required>
+                  </div>
                 </div>
-            </li>
-            <li><a >Cursos</a>
-                <div class="submenu">
-                    <a id="registrar_cursos">Registrar cursos</a><br><br>
-                    <a id="Mostrar_cursos">Mostrar cursos</a>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="foto"> Foto
+                    </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="foto" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre"> Nombre
+                    </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="nombre" type="text" placeholder="" required>
+                  </div>
                 </div>
-            </li>
-            <li><a >Asignaturas</a>
-                <div class="submenu">
-                    <a id="Registrar_Asignaturas">Registrar asignaturas</a><br><br>
-                    <a id="Mostrar_asignaturas">Mostrar asignaturas</a><br><br>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="apellido">
+                      Apellido </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="apellido" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="edad"> Edad
+                    </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="edad" type="text" placeholder="" required>
+                  </div>
                 </div>
-            </li>
-            
-        </ul>
-    </aside>
-        
-        <!-- <section>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="direccion">
+                      Dirección </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="direccion" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono">
+                      Teléfono </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="telefono" type="text" placeholder="" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="correo_institucional"> Correo
+                      institucional </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="correo_institucional" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="correo_personal">
+                      Correo personal </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="correo_personal" type="text" placeholder="" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="contrasena">
+                      Contraseña </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="contrasena" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_usuario">
+                      Tipo de usuario </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="tipo_usuario" type="text" placeholder="" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="profesion">
+                      Profesión </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="profesion" type="text" placeholder="" required>
+                  </div>
+                  <!-- Agrega más campos aquí siguiendo el mismo patrón -->
+                </div>
+              </div>
+            </div>
+
+          </form>
+
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- <button class="button">Visualizar</button> -->
+      <button id="buttonEditar" class="button">Editar</button>
+
+      <!-- The Modal -->
+      <div id="modalEditar" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <center>
+            <h2>Formulario editar</h2>
+          </center>
+          <span class="closeModalEdit">&times;</span>
+          <img id="img_modal" src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+          <h2>Estudiante</h2><br>
+          <p>Grado</p><br>
+          <form id="formulario_visualizar_usuario" class="bg-white px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_documento">
+                      Tipo de documento </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="tipo_documento" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="numero_documento"> Número de
+                      documento </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="numero_documento" type="email" placeholder="" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="foto"> Foto
+                    </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="foto" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre"> Nombre
+                    </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="nombre" type="text" placeholder="" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="apellido">
+                      Apellido </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="apellido" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="edad"> Edad
+                    </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="edad" type="text" placeholder="" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="direccion">
+                      Dirección </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="direccion" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono">
+                      Teléfono </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="telefono" type="text" placeholder="" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="correo_institucional"> Correo
+                      institucional </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="correo_institucional" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="correo_personal">
+                      Correo personal </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="correo_personal" type="text" placeholder="" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="contrasena">
+                      Contraseña </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="contrasena" type="text" placeholder="" required>
+                  </div>
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_usuario">
+                      Tipo de usuario </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="tipo_usuario" type="text" placeholder="" required>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="grid grid-flow-row gap-3">
+                <div class="sm:grid sm:grid-cols-2 gap-3">
+                  <div class="sm:col-span-1">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="profesion">
+                      Profesión </label>
+                    <input disabled
+                      class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      id="profesion" type="text" placeholder="" required>
+                  </div>
+                  <!-- Agrega más campos aquí siguiendo el mismo patrón -->
+                </div>
+              </div>
+            </div>
+            <!-- Botones -->
+            <div class="flex items-center justify-between">
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button">
+                Registrarse
+              </button>
+
+              <button
+                class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                type="button">
+                Cancelar
+              </button>
+            </div>
+          </form>
+
+
+
+        </div>
+
+      </div>
+
+      <button id="btn_eliminar_usuario_confirmar" class="button">Eliminar</button>
+
+    </div>
+  </div>
+
+  <!-- <section>
             <h2>Otra Sección</h2>
             <p>Contenido de otra sección...</p>
         </section> -->
-        <form id="formulario_registro_usuarios"class="bg-white px-8 pt-6 pb-8 mb-4">
-            <div class="mb-4">
-                <div class="grid grid-flow-row sm:grid-flow-col gap-3">
-                    <div class="sm:col-span-4 justify-center">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_documento"> Tipo de documento </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tipo_documento" type="text" placeholder="Carlos Torres" required>
-                    </div>
-                    <div class="sm:col-span-4 justify-center">
-                        <label class="block text-gray-700 text-sm font-bold mb-2" for="numero_documento"> Número de documento </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="numero_documento" type="email" placeholder="ctorres@mail.com" required>
-                    </div>
-                </div>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="foto"> Foto </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="foto" type="text" placeholder="Venta de Productos" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre"> Nombre </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nombre" type="text" placeholder="Venta de Productos" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="apellido"> Apellido </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="apellido" type="text" placeholder="Venta de Productos" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="edad"> Edad </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="edad" type="text" placeholder="Venta de Productos" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="direccion"> Dirección </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="direccion" type="text" placeholder="Venta de Productos" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono"> Teléfono </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="telefono" type="text" placeholder="Venta de Productos" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="correo_institucional"> Correo institucional </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="correo_institucional" type="text" placeholder="Venta de Productos" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="correo_personal"> Correo personal </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="correo_personal" type="text" placeholder="Venta de Productos" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="contrasena"> Contraseña </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="contrasena" type="text" placeholder="Venta de Productos" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_usuario"> Tipo de usuario </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="tipo_usuario" type="text" placeholder="Venta de Productos" required>
-            </div>
-            <div class="mb-4">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="profesion"> Profesión </label>
-                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="profesion" type="text" placeholder="Venta de Productos" required>
-            </div>
-            <div class="flex items-center justify-between">
-                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit"> Registrar </button>
-            </div>
-        </form>
-        
-        
-          <!-- Formulario -->
-          <form id="formulario_crear_curso"class="bg-white px-8 pt-6 pb-8 mb-4">
-            <div class="mb-4">
-              <div class="grid grid-flow-row sm:grid-flow-col gap-3">
-                <div class="sm:col-span-4 justify-center">
-                  <label class="block text-gray-700 text-sm font-bold mb-2" for="nya"> Nombre curso </label>
-                  <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nombre_curso" type="text" placeholder="" required>
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="nya"> Descripción curso </label>
-                        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="descripcion_curso" type="text" placeholder="" required>
-                </div>
-                <br>       
-            <div class="flex items-center justify-between">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Registrar </button>
-            </div>
-          </form> 
+  <div id="formulario_registro_usuarios" class="flex justify-center items-center h-screen">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
+      <!-- Título del formulario -->
+      <h2 class="text-2xl mb-4 text-center font-bold">Registro de Usuario</h2>
 
-          <!-- Formulario -->
-          <form id="formulario_crear_Asignatura" class="bg-white px-8 pt-6 pb-8 mb-4">
-            <div class="mb-4">
-              <div class="grid grid-flow-row sm:grid-flow-col gap-3">
-                <div class="sm:col-span-4 justify-center">
-                  <label class="block text-gray-700 text-sm font-bold mb-2" for="nya"> Nombre asignatura </label>
-                  <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="nombre_asignatura" type="text" placeholder="" required>
-                </div>
-                <br>       
-            <div class="flex items-center justify-between">
-              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Registrar </button>
-            </div>
-          </form> 
+      <!-- Primer par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentType">
+            Tipo de documento
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="documentType" type="text" placeholder="Tipo de documento" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentNumber">
+            Número de documento
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="documentNumber" type="text" placeholder="Número de documento" />
+        </div>
+      </div>
 
-            <div id="listado_docentes"></div>
-            <div id="listado_administradores"></div>
-            <div id="listado_cursos"></div>
-            <div id="listado_asignaturas"></div>
-    
-    <!-- <footer>
+      <!-- Segundo par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+            Nombre
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="name" type="text" placeholder="Nombre" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+            Apellido
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="lastName" type="text" placeholder="Apellido" />
+        </div>
+      </div>
+
+      <!-- Tercer par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="age">
+            Edad
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="age" type="text" placeholder="Edad" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+            Dirección
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="address" type="text" placeholder="Dirección" />
+        </div>
+      </div>
+
+      <!-- Cuarto par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+            Teléfono
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="phone" type="text" placeholder="Teléfono" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="institutionalEmail">
+            Correo institucional
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="institutionalEmail" type="text" placeholder="Correo institucional" />
+        </div>
+      </div>
+
+      <!-- Quinto par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="personalEmail">
+            Correo personal
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="personalEmail" type="text" placeholder="Correo personal" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="userType">
+            Tipo de usuario
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="userType" type="text" placeholder="Tipo de usuario" />
+        </div>
+      </div>
+
+      <!-- Sexto par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Contraseña
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password" type="password" placeholder="Contraseña" />
+        </div>
+        <div className="mb-4 md:mr-2 md:w-1/2">
+          <label className="block text-gray-700 text-sm font-bold mb-2" for="nya">
+            Foto
+          </label>
+          <input
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="nya" type="file" placeholder="Ingresar la foto" required />
+        </div>
+
+
+        <!-- Agregar más campos aquí según sea necesario -->
+      </div>
+
+      <!-- Botones -->
+      <div class="flex items-center justify-between">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="button">
+          Registrarse
+        </button>
+
+        <button
+          class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="button">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+
+
+  <!-- Formulario -->
+  <div id="formulario_crear_curso" class="flex justify-center items-center h-screen">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
+      <!-- Título del formulario -->
+      <h2 class="text-2xl mb-4 text-center font-bold">Registro de cursos</h2>
+
+      <!-- Primer par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentType">
+            Nombre Curso
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="documentType" type="text" placeholder="Tipo de documento" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentNumber">
+            Descriopcion
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="documentNumber" type="text" placeholder="Número de documento" />
+        </div>
+      </div>
+
+      <!-- Botones -->
+      <div class="flex items-center justify-between">
+        <button
+          class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+          type="button">
+          Registrarse
+        </button>
+
+        <button
+          class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="button">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div id="formulario_crear_Asignatura">
+    <!-- Formulario -->
+    <form class="bg-white px-8 pt-6 pb-8 mb-4">
+      <div class="mb-4">
+        <div class="grid grid-flow-row sm:grid-flow-col gap-3">
+          <div class="sm:col-span-4 justify-center">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="nya"> Nombre asignatura </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="nombre_asignatura" type="text" placeholder="" required>
+          </div>
+          <br>
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="submit">Registrar </button>
+          </div>
+    </form>
+  </div>
+
+
+  <div id="listado_docentes"></div>
+  <div id="listado_administradores"></div>
+  <div id="listado_cursos"></div>
+  <div id="listado_asignaturas"></div>
+
+  <!-- <footer>
         <p>Derechos de autor &copy; 2024 - Nombre de tu empresa</p>
     </footer> -->
-    <div id="div-con-tamano-maximo">Contenido del div con tamaño máximo</div>
 
-    <script>
+  <!-- sweealert de confirmacion -->
+  <!-- <script>
         Swal.fire({
   position: "top-end",
   icon: "success",
@@ -177,6 +657,7 @@
   showConfirmButton: false,
   timer: 1500
 });
-    </script>
+    </script> -->
 </body>
+
 </html>
