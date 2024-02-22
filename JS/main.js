@@ -1,14 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const userIcon = document.getElementById("userIcon");
-    const dropdownContent = document.getElementById("dropdownContent");
-
-    userIcon.addEventListener("click", function() {
-        if (dropdownContent.style.display === "block") {
-            dropdownContent.style.display = "none";
-        } else {
-            dropdownContent.style.display = "block";
-        }
-    });
+ 
 
     // seccion docentes
 $("#formulario_registro_foros_docente").hide();
