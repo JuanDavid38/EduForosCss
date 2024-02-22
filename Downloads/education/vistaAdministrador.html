@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vista administrador</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="main.js"></script>
+  <script src="seccionAdministrador.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/6be6f14cdc.js" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -19,7 +19,7 @@
     <div style="display: flex; margin-right: 30px;" id="iconContainer">
       <div class="user-icon" id="userIcon">
         <img
-          src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.vecteezy.com%2Fvectores-gratis%2Fpersona-explicando&psig=AOvVaw1D12FvbiG-bJ9VFcwQSKCq&ust=1708557035736000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPCLlIOFu4QDFQAAAAAdAAAAABAE"
+          src="img/vector.jpg"
           alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;">
         <div class="dropdown-content" id="dropdownContent">
           <a href="#">Mi perfil</a>
@@ -40,22 +40,24 @@
             <li>Opción 3</li>
         </ul>
     </div> -->
-  <aside id="menu">
-    <h2>Menú</h2>
+  <aside id="menu" >
+    <br>
+    <br>
     <ul>
+      
       <li><a>Usuarios</a>
         <div class="submenu">
           <a id="Registrar_usuarios">Registrar usuarios</a><br><br>
           <a id="Mostrar_docentes">Mostrar profesores</a><br><br>
           <a id="Mostrar_administradores">Mostrar Administradores</a>
         </div>
-      </li>
+      </li><br><br>
       <li><a>Cursos</a>
         <div class="submenu">
           <a id="registrar_cursos">Registrar cursos</a><br><br>
           <a id="Mostrar_cursos">Mostrar cursos</a>
         </div>
-      </li>
+      </li><br><br>
       <li><a>Asignaturas</a>
         <div class="submenu">
           <a id="Registrar_Asignaturas">Registrar asignaturas</a><br><br>
@@ -68,7 +70,7 @@
 
   <div id="cont_card">
     <!-- Las cartas se agregarán aquí dinámicamente -->
-    <div class="card">
+    <!-- <div class="card">
       <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
       <h2>TÍTULO_DE_LA_CARTA</h2><br>
       <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
@@ -79,16 +81,16 @@
     </div>
     <div class="card">
       <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
-      <h2>TÍTULO_DE_LA_CARTA</h2><br>
+      <h2>User</h2><br>
       <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
       <button class="button">Visualizar</button>
       <button class="button">Editar</button>
       <button class="button">Eliminar</button>
 
-    </div>
+    </div> -->
     <div class="card">
       <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
-      <h2>Estudiante</h2><br>
+      <h2>User</h2><br>
       <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
       <!-- <button class="button">Visualizar</button> -->
       <button id="buttonVisualizar">Visualizar</button>
@@ -270,16 +272,16 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_documento">
                       Tipo de documento </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="tipo_documento" type="text" placeholder="" required>
+                      id="tipo_documento_edit" type="text" placeholder="" required>
                   </div>
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="numero_documento"> Número de
                       documento </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="numero_documento" type="email" placeholder="" required>
+                      id="numero_documento_edit" type="email" placeholder="" required>
                   </div>
                 </div>
               </div>
@@ -290,16 +292,16 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="foto"> Foto
                     </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="foto" type="text" placeholder="" required>
+                      id="foto_edit" type="file" placeholder="" required>
                   </div>
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre"> Nombre
                     </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="nombre" type="text" placeholder="" required>
+                      id="nombre_edit" type="text" placeholder="" required>
                   </div>
                 </div>
               </div>
@@ -310,16 +312,16 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="apellido">
                       Apellido </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="apellido" type="text" placeholder="" required>
+                      id="apellido_edit" type="text" placeholder="" required>
                   </div>
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="edad"> Edad
                     </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="edad" type="text" placeholder="" required>
+                      id="edad_edit" type="text" placeholder="" required>
                   </div>
                 </div>
               </div>
@@ -330,16 +332,16 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="direccion">
                       Dirección </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="direccion" type="text" placeholder="" required>
+                      id="direccion_edit" type="text" placeholder="" required>
                   </div>
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono">
                       Teléfono </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="telefono" type="text" placeholder="" required>
+                      id="telefono_edit" type="text" placeholder="" required>
                   </div>
                 </div>
               </div>
@@ -350,16 +352,16 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="correo_institucional"> Correo
                       institucional </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="correo_institucional" type="text" placeholder="" required>
+                      id="correo_institucional_edit" type="text" placeholder="" required>
                   </div>
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="correo_personal">
                       Correo personal </label>
                     <input disabled
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="correo_personal" type="text" placeholder="" required>
+                      id="correo_personal_edit" type="text" placeholder="" required>
                   </div>
                 </div>
               </div>
@@ -370,16 +372,16 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="contrasena">
                       Contraseña </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="contrasena" type="text" placeholder="" required>
+                      id="contrasena_edit" type="text" placeholder="" required>
                   </div>
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_usuario">
                       Tipo de usuario </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="tipo_usuario" type="text" placeholder="" required>
+                      id="tipo_usuario_edit" type="text" placeholder="" required>
                   </div>
                 </div>
               </div>
@@ -390,9 +392,9 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="profesion">
                       Profesión </label>
-                    <input disabled
+                    <input 
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                      id="profesion" type="text" placeholder="" required>
+                      id="profesion_edit" type="text" placeholder="" required>
                   </div>
                   <!-- Agrega más campos aquí siguiendo el mismo patrón -->
                 </div>

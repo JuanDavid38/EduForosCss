@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista administrador</title>
+    <title>Vista Docentes</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/6be6f14cdc.js" crossorigin="anonymous"></script>
     <script src='main.js'></script>
+    <link rel=”stylesheet” media="(max-width: 800px)" href=”example.css” />
 </head>
 <body>
     <header style="display: flex; justify-content: space-between; align-items: center;">
-        <h2>Sección Administrador</h2>
+        <h2>Sección Docentes</h2>
         <div style="display: flex; margin-right: 30px;" id="iconContainer">
             <div class="user-icon" id="userIcon">
-                <img src="images/persona.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;"><div class="dropdown-content" id="dropdownContent">
+                <img src="img/vector.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;"><div class="dropdown-content" id="dropdownContent">
                     <a href="#">Mi perfil</a>
                     <a href="#">Cerrar sesión</a>
                 </div>
@@ -27,27 +28,27 @@
     </header>
     
     <aside id="menu">
-        <h2 id="Texto">Menú</h2>
+        <h2 id="Texto">Menú</h2><br><br><br>
         <ul>
-            <li><a href="#">Foro</a>
+            <li><a>Foro</a>
                 <div class="submenu">
                     <a id="crear_foro">Crear foro</a><br><br>
                     <a id="mostrar_foro">Mostrar foro</a><br><br>
                 </div>
-            </li>
-            <li><a href="cursos_asignados_docente">Cursos asignados</a>
+            </li><br><br>
+            <li><a >Cursos asignados</a>
                 <div class="submenu">
                     <!-- <a href="#">Registrar cursos</a><br><br> -->
-                    <a href="#">Mostrar cursos</a>
+                    <a id="cursos_asignados_docente">Mostrar cursos</a>
                 </div>
-            </li>
-            <li><a href="asignaturas_asignados_docente">Asignaturas asignadas</a>
+            </li><br><br>
+            <li><a >Asignaturas asignadas</a>
                 <div class="submenu">
                     <!-- <a href="#">Registrar asignaturas</a><br><br> -->
-                    <a href="#">Mostrar asignaturas</a><br><br>
+                    <a id="asignaturas_asignados_docente">Mostrar asignaturas</a><br><br>
                 </div>
-            </li>
-            <li><a href="#">Videoconferencias</a>
+            </li><br><br>
+            <li><a >Videoconferencias</a>
                 <div class="submenu">
                     <a id="crear_videoconferencias">crear videoconferencia en jitsi</a><br><br>
                     <a id="programar_videoconferencias">Programar videoconferencia</a><br><br>
@@ -57,61 +58,217 @@
             </li>
         </ul>
     </aside>
-    <main>
-      
-        <!-- <section>
-            <h2>Otra Sección</h2>
-            <p>Contenido de otra sección...</p>
-        </section> -->
-        <div id="card-container"></div>
-        <div id="card-container_cursos"></div>
-        <div id="card-container_asignaturas"></div>
-        <div id="card-container_videoconferencias"></div>
+</div>
 
 
-    </main>
-    
-    <!-- <footer>
-        <p>Derechos de autor &copy; 2024 - Nombre de tu empresa</p>
-    </footer> -->
+<div id="formulario_registro_foros_docente" class="flex justify-center items-center h-screen">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
+      <!-- Título del formulario -->
+      <h2 class="text-2xl mb-4 text-center font-bold">Registro foros</h2>
 
-    <form id="formulario_crear_foro" class="bg-white px-8 pt-6 pb-8 mb-4">
-        <div class="mb-4">
-            <div class="grid grid-flow-row sm:grid-flow-col gap-3">
-                <div class="sm:col-span-4 justify-center">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="asignatura"> Asignatura </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="asignatura" type="text" placeholder="" required>
-                </div>
-                <div class="sm:col-span-4 justify-center">
-                    <label class="block text-gray-700 text-sm font-bold mb-2" for="curso"> Curso </label>
-                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="curso" type="email" placeholder="" required>
-                </div>
-            </div>
+      <!-- Primer par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentType">
+            Asunto
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="Asunto" type="text" placeholder="Asunto" />
         </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="titulo"> Título </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="titulo" type="text" placeholder="" required>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentNumber">
+            Titulo
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="Titulo" type="text" placeholder="Titulo" />
         </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="fecha_inicio"> Fecha de Inicio </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="fecha_inicio" type="text" placeholder="" required>
+      </div>
+
+      <!-- Segundo par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+            Fecha de Inicio
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="fecha_inicio" type="text" placeholder="Fecha inicio" />
         </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="fecha_fin"> Fecha de Fin </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="fecha_fin" type="text" placeholder="" required>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+            Fecha de fin
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="fecha_fin" type="text" placeholder="fecha final" />
         </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="calificable"> Calificable </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="calificable" type="text" placeholder="" required>
+      </div>
+
+      <!-- Tercer par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="age">
+            Calificable
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="Calificable" type="text" placeholder="Calificable" />
         </div>
-        <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="mensaje"> Mensaje </label>
-            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="mensaje" rows="5" placeholder="" required></textarea>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
+            Mensaje
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="Mensaje" type="text" placeholder="Mensaje" />
         </div>
-        <div class="flex items-center justify-between">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit"> Crear </button>
-        </div>
+      </div>
+
+      <!-- Botones -->
+      <div class="flex items-center justify-between">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="button">
+          Registrarse
+        </button>
+
+        <button
+          class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="button">
+          Cancelar
+        </button>
+      </div>
     </form>
+  </div>
+     
+
+      
+
+
+        <!-- Agregar más campos aquí según sea necesario -->
+      </div>
+
+     
+
+<!-- cartas de los foros -->
+<div id="cartas_foros_docente">
+    <!-- Las cartas se agregarán aquí dinámicamente -->
+    <div class="card">
+        <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+        <h2>Foros</h2><br>
+        <p>Foro educativo</p><br>
+        <button class="button">Visualizar</button>
+          </div>
+    
+</div>
+    
+
+<!-- cartas de cursos asignados -->
+<div id="cartas_cursos_asignados_docente">
+    <!-- Las cartas se agregarán aquí dinámicamente -->
+    <div class="card">
+        <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+        <h2>Curso asignado</h2><br>
+        <p>1001</p><br>
+          </div>
+    
+</div>
+
+<!-- cartas de asignaturas asignados -->
+<div id="cartas_asignaturas_asignados_docente">
+    <!-- Las cartas se agregarán aquí dinámicamente -->
+    <div class="card">
+        <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+        <h2>Asinatura asignado</h2><br>
+        <p>Español</p><br>
+          </div>
+    
+</div>
+
+<!-- cartas de crear videoconferencias -->
+<div id="cartas_crear_video_docente">
+    <!-- Las cartas se agregarán aquí dinámicamente -->
+    <div class="card">
+        <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+        <h2>Crear Videoconferencia</h2><br>
+        <p>Haga click</p><br>
+        <button class="button">Iniciar Reunión</button>
+          </div>
+    
+</div>
+
+
+
+<div id="formulario_programar_video_docente" class="flex justify-center items-center h-screen">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
+      <!-- Título del formulario -->
+      <h2 class="text-2xl mb-4 text-center font-bold">Programar videoconferencias</h2>
+
+      <!-- Primer par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentNumber">
+            Nombre videoconferencia
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="Titulo" type="text" placeholder="Titulo" />
+        </div>
+      </div>
+
+      <!-- Segundo par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+            Fecha de Inicio
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="fecha_inicio" type="date" placeholder="Fecha inicio" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+            Fecha de fin
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="fecha_fin" type="date" placeholder="fecha final" />
+        </div>
+      </div>
+
+      
+
+      <!-- Botones -->
+      <div class="flex items-center justify-between">
+        <button
+          class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="button">
+          Guardar
+        </button>
+
+        <button
+          class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="button">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!-- cartas de ver videoconferencias -->
+<div id="cartas_ver_video_docente">
+    <!-- Las cartas se agregarán aquí dinámicamente -->
+    <div class="card">
+        <img src="img/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+        <h2>Videoconferencia #2</h2><br>
+        <p>Datos...</p><br>
+        <button class="button">Abrir</button>
+          </div>
+    
+</div>
 
     
 </body>
