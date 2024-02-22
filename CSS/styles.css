@@ -1,0 +1,478 @@
+
+
+        /* @media screen and (min-width:500px){} */
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 100%;
+}
+
+
+header h1 {
+    margin: 0;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* Estilos específicos */
+aside {
+    background-color: #f4f4f4;
+    padding: 20px;
+    width: 200px; /* Ancho del menú lateral */
+}
+
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+aside ul li {
+    margin-bottom: 70px;
+}
+
+
+aside ul li a  {
+    color: #333;
+    text-decoration: none;
+}
+
+
+aside ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Media Queries para hacer los estilos responsive */
+
+
+/* Para pantallas más pequeñas, cambiamos el diseño a uno de columnas */
+@media only screen and (max-width: 768px) {
+    .panel {
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Estilos para el menú */
+#menu {
+    background-color: #aaa;
+    height: 883px;
+    /* padding: 20px;
+    width: 200px;
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    z-index: 1000;
+    display: none; */
+}
+
+
+#menu.active {
+    display: block;
+   
+}
+
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+#menu li {
+    position: relative;
+}
+
+
+.submenu {
+    display: none;
+    /* position: absolute; */
+    top: 0;
+    left: 100%;
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 0 4px 4px 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+   
+}
+
+
+#menu li:hover .submenu {
+    display: block;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: -20px;
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+#cont_card,#cursos_asignados_cards,#cursos_videoconferencias_cards,#cartas_foros_docente
+,#cartas_cursos_asignados_docente,#cartas_asignaturas_asignados_docente
+,#cartas_crear_video_docente,#cartas_ver_video_docente {
+    display: flex; /* Usa Flexbox */
+    flex-wrap: wrap; /* Envuelve las cartas cuando no haya suficiente espacio */
+    justify-content: center; /* Centra las cartas horizontalmente */
+    max-width: 1300px; /* Establece el ancho máximo del contenedor */
+    margin: -280px auto 0; /* Centra el contenedor horizontalmente */
+    padding: 20px; /* Agrega un poco de espacio alrededor del contenedor */
+    margin-left: 420px; /* Mueve el contenedor un poco a la derecha */
+    margin-top: -830px;
+}
+
+
+.card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 40px;
+    padding: 20px;
+    flex: 0 0 calc(33.33% - 80px); /* Ajusta el ancho de cada carta para que quepan tres en una fila con margen */
+}
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 16px;
+    color: #666;
+}
+
+
+
+
+
+/* Estilo base del botón */
+button {
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+
+/* Estilo cuando se pasa el cursor sobre el botón */
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* Estilo cuando se presiona el botón */
+button:active {
+    transform: translateY(1px);
+}
+ 
+/* estilos modal administrador vboton visualizar*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+ 
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+ 
+  /* The Close Button */
+  .close,.closeModalEdit,.closeModalEstudianteCurso {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+ 
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  #img_modal{
+    width: 300px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+
+/* formulario dentro de las cartas*/
+  #formulario_visualizar_usuario {
+    max-width: 1000px; /* Reducir el ancho máximo del formulario */
+    margin-left: 380px;
+    padding: 20px; /* Añadir un poco de espacio alrededor del formulario */
+    margin-top: -400px;
+}
+
+
+#formulario_visualizar_usuario .mb-4 {
+    margin-bottom: 10px; /* Reducir el espacio entre cada campo del formulario */
+}
+
+
+#formulario_visualizar_usuario .block {
+    margin-bottom: 5px; /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
+}
+
+
+#formulario_visualizar_usuario .rounded {
+    border-radius: 4px; /* Redondear los bordes de los campos de entrada */
+}
+
+
+
+
+/* formulario de registro usuarios,profesor,administrador */
+#formulario_registro_usuarios,#formulario_registro_foros_docente,#formulario_programar_video_docente {
+    margin-top: -920px;
+    margin-left: 200px;
+}
+
+
+/* formulario de registro cursos */
+#formulario_crear_curso,#formulario_registro_foros_docente,#formulario_programar_video_docente {
+    margin-top: -1100px;
+    margin-left: 200px;
+}
+/* formulario de registro asignatura */
+#formulario_crear_Asignatura,#formulario_registro_foros_docente,#formulario_programar_video_docente {
+    margin-top: -1100px;
+    margin-left: 200px;
+}
+
+
+
+
+
+
+@media only screen and (min-width: 386px) and (max-width: 876px) {
+    /* Estilos específicos para pantallas con una dimensión de 386x876 píxeles */
+   
+
+
+    /* .container {
+        width: 90%;  
+    } */
+
+
+    /* formulario de registro usuarios,profesor,administrador */
+#formulario_registro_usuarios,#formulario_registro_foros_docente,#formulario_programar_video_docente {
+    margin-top: -800px;
+    margin-left: -700px;
+}
+
+
+/* formulario de registro cursos */
+#formulario_crear_curso,#formulario_registro_foros_docente,#formulario_programar_video_docente {
+    margin-top: -800px;
+    margin-left: 200px;
+}
+/* formulario de registro asignatura */
+#formulario_crear_Asignatura,#formulario_registro_foros_docente,#formulario_programar_video_docente {
+    margin-top: -940px;
+    margin-left: -200px;
+    width: 285px;
+    margin-left: 50px;
+    margin-top: 40px;
+
+
+}
+
+
+/* formulario dentro de las cartas*/
+#formulario_visualizar_usuario {
+    max-width: 500px; /* Reducir el ancho máximo del formulario */
+    
+    margin-left: -6px;
+    /* padding: 20px;  */
+    margin-top: 2px;
+}
+
+
+#formulario_visualizar_usuario .mb-4 {
+    margin-bottom: 7px; /* Reducir el espacio entre cada campo del formulario */
+}
+
+
+#formulario_visualizar_usuario .block {
+    margin-bottom: 7px; /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
+}
+
+
+#formulario_visualizar_usuario .rounded {
+    border-radius: 4px; /* Redondear los bordes de los campos de entrada */
+}
+
+ /* Modal Content/Box */
+ .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* Could be more or less, depending on screen size */
+  }
+  #img_modal{
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+#cont_card,#cursos_asignados_cards,#cursos_videoconferencias_cards,#cartas_foros_docente
+,#cartas_cursos_asignados_docente,#cartas_asignaturas_asignados_docente
+,#cartas_crear_video_docente,#cartas_ver_video_docente {
+    justify-content: center; /* Centra las cartas horizontalmente */
+    max-width: 1300px; /* Establece el ancho máximo del contenedor */
+    padding: 80px; /* Agrega un poco de espacio alrededor del contenedor */
+    margin-left: 10px; /* Mueve el contenedor un poco a la derecha */
+    margin-top: 40px;
+   
+}
+   
+.card {
+    width: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    margin: 40px;
+    padding: 50px;
+
+
+}
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.card h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.card p {
+    font-size: 16px;
+    color: #666;
+}
+ /* Otros estilos específicos para esta resolución */
+ .submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    /* left: 100%; */
+    background-color: #ddd;
+    padding: 10px;
+    border-radius: 0 4px 4px 4px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-left: -130px;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 120px;
+    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    /* right: -20px; */
+    margin-right: 29px;
+    margin-top: 10px;
+}
+
+
+
+
+}
+
+
+
