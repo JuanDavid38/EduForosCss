@@ -7,6 +7,8 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="sweetalert2.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     
     <script src='main.js'></script>
@@ -88,27 +90,27 @@
               />
             </div>
           </div>
-      
-          <!-- Tercer par de campos -->
+         
           <div class="mb-4 flex flex-col md:flex-row">
             <div class="mb-4 md:mr-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="age">
-                Edad
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+                Fecha de Inicio
               </label>
               <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="age" type="text" placeholder="Edad"
+                id="phone" type="date" placeholder="Teléfono"
               />
             </div>
             <div class="mb-4 md:ml-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
-                Dirección
+              <label class="block text-gray-700 text-sm font-bold mb-2" for="institutionalEmail">
+                Fecha Final
               </label>
               <input
                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="address" type="text" placeholder="Dirección"
+                id="institutionalEmail" type="date" placeholder="Correo institucional"
               />
             </div>
+
           </div>
       
           <!-- Cuarto par de campos -->
@@ -198,6 +200,8 @@
           </div>
         </form>
       </div>
+
+      
       
       
       
