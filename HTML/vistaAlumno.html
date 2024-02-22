@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vista administrador</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <script src="../JS/seccionAlumnos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -14,10 +14,9 @@
 <body>
     <header style="display: flex; justify-content: space-between; align-items: center;">
         <h2>Sección Administrador</h2>
-        <button id="toggleMenu">☰</button>
         <div style="display: flex; margin-right: 30px;" id="iconContainer">
             <div class="user-icon" id="userIcon">
-                <img src="images/persona.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;"><div class="dropdown-content" id="dropdownContent">
+                <img src="../images/vector.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;"><div class="dropdown-content" id="dropdownContent">
                     <a href="#">Mi perfil</a>
                     <a href="#">Cerrar sesión</a>
                 </div>
@@ -59,10 +58,32 @@
             <h2>Otra Sección</h2>
             <p>Contenido de otra sección...</p>
         </section> -->
-        <div id="listado_cursos_asignados_estudiantes"></div>
-        <div id="listado_conferencias_asignados_estudiantes"></div>
+       
 
+        <div id="cursos_asignados_cards">
+            <!-- Las cartas se agregarán aquí dinámicamente -->
+            <div class="card">
+                <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+                <h2>Curso</h2><br>
+                <p>1001</p><br>
+                <button class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                type="button">Visualizar</button>
+                  </div>
+            
+        </div>
 
+        <div id="cursos_videoconferencias_cards">
+            <!-- Las cartas se agregarán aquí dinámicamente -->
+            <div class="card">
+                <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+                <h2>Videollamada1</h2><br>
+                <p>Videollamada...</p><br>
+                <button class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
+                type="button">Ingresar</button>
+                </div>
+               
+            </div>
+                
     </main>
     
     <!-- <footer>
