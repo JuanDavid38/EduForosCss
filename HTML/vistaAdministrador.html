@@ -17,10 +17,21 @@
   <header style="display: flex; justify-content: space-between; align-items: center;">
     <h2>Sección Administrador</h2>
     <div style="display: flex; margin-right: 30px;" id="iconContainer">
-      <div class="user-icon" id="userIcon">
-        <img
-          src="../images/vector.jpg"
-          alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;">
+      <div class="user-icon" id="userIcon">          
+          <div style="display: flex; align-items: center; margin-right: 30px;" id="iconContainer">
+            <div class="user-icon" id="userIcon">
+                <img src="../images/vector.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;">
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="#">Mi perfil</a>
+                    <a href="#">Cerrar sesión</a>
+                </div>
+            </div>
+            
+            <div style="margin-left: 10px;"> <!-- Puedes ajustar el valor de margin-left según tu preferencia -->
+                <strong>Juan David</strong>
+                <p>Programador</p>
+            </div>
+        </div>
         <div class="dropdown-content" id="dropdownContent">
           <a href="#">Mi perfil</a>
           <a href="#">Cerrar sesión</a>
