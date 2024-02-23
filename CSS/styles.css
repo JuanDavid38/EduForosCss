@@ -264,7 +264,7 @@ button:active {
   }
  
   /* The Close Button */
-  .close,.closeModalEdit,.closeModalEstudianteCurso {
+  .close,.closeModalEdit,.closeModalEstudianteCurso,.closeModalPerfil_docente,.closeModalPerfil_administrador,.closeModalPerfil_alumno {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -287,7 +287,7 @@ button:active {
 
 
 /* formulario dentro de las cartas*/
-  #formulario_visualizar_usuario {
+  #formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador {
     max-width: 1000px; /* Reducir el ancho máximo del formulario */
     margin-left: 380px;
     padding: 20px; /* Añadir un poco de espacio alrededor del formulario */
@@ -295,17 +295,17 @@ button:active {
 }
 
 
-#formulario_visualizar_usuario .mb-4 {
+#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .mb-4 {
     margin-bottom: 10px; /* Reducir el espacio entre cada campo del formulario */
 }
 
 
-#formulario_visualizar_usuario .block {
+#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .block {
     margin-bottom: 5px; /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
 }
 
 
-#formulario_visualizar_usuario .rounded {
+#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .rounded {
     border-radius: 4px; /* Redondear los bordes de los campos de entrada */
 }
 
@@ -344,18 +344,42 @@ button:active {
         width: 90%;  
     } */
 
-
-    /* formulario de registro usuarios,profesor,administrador */
-#formulario_registro_usuarios,#formulario_registro_foros_docente,#formulario_programar_video_docente {
-    margin-top: -800px;
-    margin-left: -700px;
+    /* formulario dentro de las cartas*/
+  #formulario_crear_curso,#formulario_registro_usuarios,#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador {
+    max-width: 1000px; /* Reducir el ancho máximo del formulario */
+    margin-left: 5px;
+    padding: 20px; /* Añadir un poco de espacio alrededor del formulario */
+    margin-top: 7px;
 }
 
 
+#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .mb-4 {
+    margin-bottom: 10px; /* Reducir el espacio entre cada campo del formulario */
+}
+
+
+#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .block {
+    margin-bottom: 5px; /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
+}
+
+
+#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .rounded {
+    border-radius: 4px; /* Redondear los bordes de los campos de entrada */
+}
+
+
+    /* formulario de registro usuarios,profesor,administrador */
+#formulario_registro_foros_docente,#formulario_programar_video_docente {
+    margin-top: -800px;
+    margin-left: -700px;
+
+}
+
 /* formulario de registro cursos */
-#formulario_crear_curso,#formulario_registro_foros_docente,#formulario_programar_video_docente {
+#formulario_registro_foros_docente,#formulario_programar_video_docente {
     margin-top: -800px;
     margin-left: 200px;
+
 }
 /* formulario de registro asignatura */
 #formulario_crear_Asignatura,#formulario_registro_foros_docente,#formulario_programar_video_docente {
@@ -364,8 +388,6 @@ button:active {
     width: 285px;
     margin-left: 50px;
     margin-top: 40px;
-
-
 }
 
 

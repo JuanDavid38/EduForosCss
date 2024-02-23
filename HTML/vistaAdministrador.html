@@ -14,26 +14,14 @@
 </head>
 
 <body>
+
   <header style="display: flex; justify-content: space-between; align-items: center;">
     <h2>Sección Administrador</h2>
     <div style="display: flex; margin-right: 30px;" id="iconContainer">
-      <div class="user-icon" id="userIcon">          
-          <div style="display: flex; align-items: center; margin-right: 30px;" id="iconContainer">
-            <div class="user-icon" id="userIcon">
-                <img src="../images/vector.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;">
-                <div class="dropdown-content" id="dropdownContent">
-                    <a href="#">Mi perfil</a>
-                    <a href="#">Cerrar sesión</a>
-                </div>
-            </div>
-            
-            <div style="margin-left: 10px;"> <!-- Puedes ajustar el valor de margin-left según tu preferencia -->
-                <strong>Juan David</strong>
-                <p>Programador</p>
-            </div>
-        </div>
+      <div class="user-icon" id="userIcon">
+        <img src="../images/vector.jpg" alt="Icono de usuario" style="width: 40px; height: 40px; border-radius: 50%;">
         <div class="dropdown-content" id="dropdownContent">
-          <a href="#">Mi perfil</a>
+          <a id="btn_perfil_administrador">Mi perfil</a>
           <a href="#">Cerrar sesión</a>
         </div>
       </div>
@@ -51,11 +39,11 @@
             <li>Opción 3</li>
         </ul>
     </div> -->
-  <aside id="menu" >
+  <aside id="menu">
     <br>
     <br>
     <ul>
-      
+
       <li><a>Usuarios</a>
         <div class="submenu">
           <a id="Registrar_usuarios">Registrar usuarios</a><br><br>
@@ -78,22 +66,117 @@
 
     </ul>
   </aside>
+  <!-- The Modal -->
+  <div id="modal_perfil_administrador" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <center>
+        <h2>Sección mi perfil</h2><br>
+      </center>
+      <span class="closeModalPerfil_administrador">&times;</span>
+      <img id="img_modal" src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+      <h2></h2><br>
+      <p></p><br>
+      <form id="formulario_perfil_administrador" class="bg-white px-8 pt-6 pb-8 mb-4">
+
+        <div class="mb-4">
+          <div class="grid grid-flow-row gap-3">
+            <div class="sm:grid sm:grid-cols-2 gap-3">
+              <div class="sm:col-span-1">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="foto"> Foto
+                </label>
+                <input
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="foto_edit_perfil_docentes" type="file" placeholder="" required>
+              </div>
+              <div class="sm:col-span-1">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">
+                  Nombre
+                </label>
+                <input
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="nombre_edit_perfil_docentes" type="text" placeholder="" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <div class="grid grid-flow-row gap-3">
+            <div class="sm:grid sm:grid-cols-2 gap-3">
+              <div class="sm:col-span-1">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="apellido">
+                  Apellido </label>
+                <input
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="apellido_edit_perfil_docentes" type="text" placeholder="" required>
+              </div>
+              <div class="sm:col-span-1">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="Email">
+                  Email
+                </label>
+                <input
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="email_edit_perfil_docentes" type="email" placeholder="" required>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mb-4">
+          <div class="grid grid-flow-row gap-3">
+            <div class="sm:grid sm:grid-cols-2 gap-3">
+              <div class="sm:col-span-1">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="direccion">
+                  Dirección </label>
+                <input
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="direccion_edit_perfil_docentes" type="text" placeholder="" required>
+              </div>
+              <div class="sm:col-span-1">
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono">
+                  Contraseña </label>
+                <input
+                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  id="contraseña_edit_perfil_docentes" type="password" placeholder="" required>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Botones -->
+        <div class="flex items-center justify-between">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button">
+            Guardar
+          </button>
+
+          <button
+            class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="button">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <div id="cont_card">
-     <div class="card">
+    <!-- Las cartas se agregarán aquí dinámicamente -->
+    <div class="card">
       <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
       <h2>TÍTULO_DE_LA_CARTA</h2><br>
       <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
       <button
         class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
         type="button">Visualizar</button>
-      <button id="buttonEditar"
+      <button
         class="bg-yellow-300 shadow-lg shadow-yellow-300/50 ... hover:bg-yellow-500 shadow-lg shadow-yellow-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
         type="button">Editar</button>
       <button
         class="bg-red-300 shadow-lg shadow-red-300/50 ... hover:bg-red-500 shadow-lg shadow-red-500/50 ...  text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
         type="button">Eliminar</button>
-
 
     </div>
     <div class="card">
@@ -101,15 +184,14 @@
       <h2>User</h2><br>
       <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
       <button
-      class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-      type="button">Visualizar</button>
-    <button id="buttonEditar"
-      class="bg-yellow-300 shadow-lg shadow-yellow-300/50 ... hover:bg-yellow-500 shadow-lg shadow-yellow-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-      type="button">Editar</button>
-    <button
-      class="bg-red-300 shadow-lg shadow-red-300/50 ... hover:bg-red-500 shadow-lg shadow-red-500/50 ...  text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-      type="button">Eliminar</button>
-
+        class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+        type="button">Visualizar</button>
+      <button
+        class="bg-yellow-300 shadow-lg shadow-yellow-300/50 ... hover:bg-yellow-500 shadow-lg shadow-yellow-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+        type="button">Editar</button>
+      <button
+        class="bg-red-300 shadow-lg shadow-red-300/50 ... hover:bg-red-500 shadow-lg shadow-red-500/50 ...  text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+        type="button">Eliminar</button>
 
     </div>
     <div class="card">
@@ -117,8 +199,9 @@
       <h2>User</h2><br>
       <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
       <!-- <button class="button">Visualizar</button> -->
-      <button id="buttonVisualizar"  class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-      type="button">Visualizar</button>
+      <button id="buttonVisualizar"
+        class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+        type="button">Visualizar</button>
 
       <!-- The Modal -->
       <div id="modalVisualizar" class="modal">
@@ -276,8 +359,9 @@
 
 
       <!-- <button class="button">Visualizar</button> -->
-      <button id="buttonEditar" class="bg-yellow-300 shadow-lg shadow-yellow-300/50 ... hover:bg-yellow-500 shadow-lg shadow-yellow-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-      type="button">Editar</button>
+      <button id="buttonEditar"
+        class="bg-yellow-300 shadow-lg shadow-yellow-300/50 ... hover:bg-yellow-500 shadow-lg shadow-yellow-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+        type="button">Editar</button>
 
       <!-- The Modal -->
       <div id="modalEditar" class="modal">
@@ -298,14 +382,14 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_documento">
                       Tipo de documento </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="tipo_documento_edit" type="text" placeholder="" required>
                   </div>
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="numero_documento"> Número de
                       documento </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="numero_documento_edit" type="email" placeholder="" required>
                   </div>
@@ -318,14 +402,14 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="foto"> Foto
                     </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="foto_edit" type="file" placeholder="" required>
                   </div>
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre"> Nombre
                     </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="nombre_edit" type="text" placeholder="" required>
                   </div>
@@ -338,14 +422,14 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="apellido">
                       Apellido </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="apellido_edit" type="text" placeholder="" required>
                   </div>
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="edad"> Edad
                     </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="edad_edit" type="text" placeholder="" required>
                   </div>
@@ -358,14 +442,14 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="direccion">
                       Dirección </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="direccion_edit" type="text" placeholder="" required>
                   </div>
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono">
                       Teléfono </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="telefono_edit" type="text" placeholder="" required>
                   </div>
@@ -378,7 +462,7 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="correo_institucional"> Correo
                       institucional </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="correo_institucional_edit" type="text" placeholder="" required>
                   </div>
@@ -398,14 +482,14 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="contrasena">
                       Contraseña </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="contrasena_edit" type="text" placeholder="" required>
                   </div>
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="tipo_usuario">
                       Tipo de usuario </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="tipo_usuario_edit" type="text" placeholder="" required>
                   </div>
@@ -418,7 +502,7 @@
                   <div class="sm:col-span-1">
                     <label class="block text-gray-700 text-sm font-bold mb-2" for="profesion">
                       Profesión </label>
-                    <input 
+                    <input
                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                       id="profesion_edit" type="text" placeholder="" required>
                   </div>
@@ -429,16 +513,16 @@
             <!-- Botones -->
             <div class="flex items-center justify-between">
               <button
-              class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-              type="button">
-              Registrarse
-            </button>
-    
-            <button
-              class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
-              type="button">
-              Cancelar
-            </button>
+                class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                type="button">
+                Registrarse
+              </button>
+
+              <button
+                class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
+                type="button">
+                Cancelar
+              </button>
             </div>
           </form>
 
@@ -448,8 +532,9 @@
 
       </div>
 
-      <button id="btn_eliminar_usuario_confirmar"  class="bg-red-300 shadow-lg shadow-red-300/50 ... hover:bg-red-500 shadow-lg shadow-red-500/50 ...  text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-      type="button">Eliminar</button>
+      <button id="btn_eliminar_usuario_confirmar"
+        class="bg-red-300 shadow-lg shadow-red-300/50 ... hover:bg-red-500 shadow-lg shadow-red-500/50 ...  text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+        type="button">Eliminar</button>
 
     </div>
   </div>
@@ -661,13 +746,10 @@
           <br>
           <div class="flex items-center justify-between">
             <button
-          class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-          type="button">
-          Registrarse
-        </button>
-
-        
-          </div>
+              class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+              type="button">
+              Registrarse
+            </button>
     </form>
   </div>
 

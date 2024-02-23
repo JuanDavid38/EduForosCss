@@ -1,209 +1,196 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link rel="stylesheet" href="sweetalert2.min.css">
-    <script src="sweetalert2.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script src='main.js'></script>
-    
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+  <link rel="stylesheet" href="sweetalert2.min.css">
+  <script src="sweetalert2.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src='main.js'></script>
+
 </head>
+
 <body>
-    <div class="container">
+  <div class="container">
     <div class="relative inline-block text-left">
-        <button class="bg-gray-800 text-white font-semibold py-2 px-4 rounded-full">Cursos</button>
-        <div class="hidden absolute left-0 mt-2 bg-white rounded-md shadow-lg w-48">
-          <div class="py-2">
-            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Once A</a>
-            <div class="ml-2">
-              <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 1</a>
-              <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 2</a>
-              <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 3</a>
-              <!-- Agrega más opciones según sea necesario -->
-            </div>
+      <button class="bg-gray-800 text-white font-semibold py-2 px-4 rounded-full">Cursos</button>
+      <div class="hidden absolute left-0 mt-2 bg-white rounded-md shadow-lg w-48">
+        <div class="py-2">
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Once A</a>
+          <div class="ml-2">
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 1</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 2</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 3</a>
+            <!-- Agrega más opciones según sea necesario -->
           </div>
-          <div class="py-2">
-            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Once B</a>
-            <div class="ml-2">
-              <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 1</a>
-              <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 2</a>
-              <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 3</a>
-              <!-- Agrega más opciones según sea necesario -->
-            </div>
-          </div>
-          <!-- Agrega más submenús según sea necesario -->
         </div>
+        <div class="py-2">
+          <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Once B</a>
+          <div class="ml-2">
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 1</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 2</a>
+            <a href="#" class="block px-4 py-2 text-gray-800 hover:bg-indigo-500 hover:text-white">Opción 3</a>
+            <!-- Agrega más opciones según sea necesario -->
+          </div>
+        </div>
+        <!-- Agrega más submenús según sea necesario -->
       </div>
     </div>
-    <div class="flex justify-center items-center h-screen">
-        <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
-          <!-- Título del formulario -->
-          <h2 class="text-2xl mb-4 text-center font-bold">Registro de Usuario</h2>
-          <br>
-          <br>
-          <!-- Primer par de campos -->
-          <div class="mb-4 flex flex-col md:flex-row">
-            <div class="mb-4 md:mr-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="documentType">
-                Nombre Curso
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="documentType" type="text" placeholder="Tipo de documento"
-              />
-            </div>
-            <div class="mb-4 md:ml-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="documentNumber">
-                Descriopcion
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="documentNumber" type="text" placeholder="Número de documento"
-              />
-            </div>
-          </div>
-      
-          <!-- Segundo par de campos -->
-          <div class="mb-4 flex flex-col md:flex-row">
-            <div class="mb-4 md:mr-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
-                Nombre
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="name" type="text" placeholder="Nombre"
-              />
-            </div>
-            <div class="mb-4 md:ml-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
-                Apellido
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="lastName" type="text" placeholder="Apellido"
-              />
-            </div>
-          </div>
-         
-          <div class="mb-4 flex flex-col md:flex-row">
-            <div class="mb-4 md:mr-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
-                Fecha de Inicio
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="phone" type="date" placeholder="Teléfono"
-              />
-            </div>
-            <div class="mb-4 md:ml-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="institutionalEmail">
-                Fecha Final
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="institutionalEmail" type="date" placeholder="Correo institucional"
-              />
-            </div>
-
-          </div>
-      
-          <!-- Cuarto par de campos -->
-          <div class="mb-4 flex flex-col md:flex-row">
-            <div class="mb-4 md:mr-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
-                Teléfono
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="phone" type="text" placeholder="Teléfono"
-              />
-            </div>
-            <div class="mb-4 md:ml-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="institutionalEmail">
-                Correo institucional
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="institutionalEmail" type="text" placeholder="Correo institucional"
-              />
-            </div>
-          </div>
-      
-          <!-- Quinto par de campos -->
-          <div class="mb-4 flex flex-col md:flex-row">
-            <div class="mb-4 md:mr-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="personalEmail">
-                Correo personal
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="personalEmail" type="text" placeholder="Correo personal"
-              />
-            </div>
-            <div class="mb-4 md:ml-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="userType">
-                Tipo de usuario
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="userType" type="text" placeholder="Tipo de usuario"
-              />
-            </div>
-          </div>
-      
-          <!-- Sexto par de campos -->
-          <div class="mb-4 flex flex-col md:flex-row">
-            <div class="mb-4 md:mr-2 md:w-1/2">
-              <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                Contraseña
-              </label>
-              <input
-                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="password" type="password" placeholder="Contraseña"
-              />
-            </div>
-            <div class="mb-4 md:mr-2 md:w-1/2">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
-                  Contraseña
-                </label>
-                <input
-                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="password" type="password" placeholder="Contraseña"
-                />
-              </div>
-              
-              
-            <!-- Agregar más campos aquí según sea necesario -->
-          </div>
-      
-          <!-- Botones -->
-          <div class="flex items-center justify-between">
-            <button
-              class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-              type="button"
-            >
-              Registrarse
-            </button>
-      
-            <button
-              class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
-              type="button"
-            >
-              Cancelar
-            </button>
-          </div>
-        </form>
+  </div>
+  <div class="flex justify-center items-center h-screen">
+    <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
+      <!-- Título del formulario -->
+      <h2 class="text-2xl mb-4 text-center font-bold">Registro de Usuario</h2>
+      <br>
+      <br>
+      <!-- Primer par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentType">
+            Nombre Curso
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="documentType" type="text" placeholder="Tipo de documento" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentNumber">
+            Descriopcion
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="documentNumber" type="text" placeholder="Número de documento" />
+        </div>
       </div>
 
-      
-      
-      
-      
+      <!-- Segundo par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+            Nombre
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="name" type="text" placeholder="Nombre" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+            Apellido
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="lastName" type="text" placeholder="Apellido" />
+        </div>
+      </div>
+
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+            Fecha de Inicio
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="phone" type="date" placeholder="Teléfono" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="institutionalEmail">
+            Fecha Final
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="institutionalEmail" type="date" placeholder="Correo institucional" />
+        </div>
+
+      </div>
+
+      <!-- Cuarto par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">
+            Teléfono
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="phone" type="text" placeholder="Teléfono" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="institutionalEmail">
+            Correo institucional
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="institutionalEmail" type="text" placeholder="Correo institucional" />
+        </div>
+      </div>
+
+      <!-- Quinto par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="personalEmail">
+            Correo personal
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="personalEmail" type="text" placeholder="Correo personal" />
+        </div>
+        <div class="mb-4 md:ml-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="userType">
+            Tipo de usuario
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="userType" type="text" placeholder="Tipo de usuario" />
+        </div>
+      </div>
+
+      <!-- Sexto par de campos -->
+      <div class="mb-4 flex flex-col md:flex-row">
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Contraseña
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password" type="password" placeholder="Contraseña" />
+        </div>
+        <div class="mb-4 md:mr-2 md:w-1/2">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            Contraseña
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password" type="password" placeholder="Contraseña" />
+        </div>
+
+
+        <!-- Agregar más campos aquí según sea necesario -->
+      </div>
+
+      <!-- Botones -->
+      <div class="flex items-center justify-between">
+        <button
+          class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+          type="button">
+          Registrarse
+        </button>
+
+        <button
+          class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
+          type="button">
+          Cancelar
+        </button>
+      </div>
+    </form>
+  </div>
+  
+
+
 </body>
+
 </html>
