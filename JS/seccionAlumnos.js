@@ -15,26 +15,39 @@ document.addEventListener("DOMContentLoaded", function() {
 $("#cursos_asignados_cards").hide();
 $("#cursos_videoconferencias_cards").hide();
 $("#estudiante_cards_foros").hide();
+$("#contenedor_respuestas").hide();
 
 $("#ver_curso_estudiante").on("click", function() {
     $("#cursos_asignados_cards").show();
     $("#cursos_videoconferencias_cards").hide();
     $("#estudiante_cards_foros").hide();
+    $("#contenedor_respuestas").hide();
 
 });
 $("#ver_videoconferencia_estudiante").on("click", function() {
     $("#cursos_videoconferencias_cards").show();
     $("#cursos_asignados_cards").hide();
     $("#estudiante_cards_foros").hide();
+    $("#contenedor_respuestas").hide();
 
 });
 $("#ver_foros_estudiante").on("click", function() {
   $("#estudiante_cards_foros").show();
   $("#cursos_videoconferencias_cards").hide();
   $("#cursos_asignados_cards").hide();
+  $("#contenedor_respuestas").hide();
 
 });
 
+
+$("#responder_foro").on("click", function() {
+  $("#estudiante_cards_foros").show();
+  $("#cursos_videoconferencias_cards").hide();
+  $("#cursos_asignados_cards").hide();
+  $("#contenedor_respuestas").show();
+
+  
+});
 // funcionamiento del modal visualizar mi perfil, sección docente
 // Get the modal
 var modal = document.getElementById("modal_perfil_alumno");
