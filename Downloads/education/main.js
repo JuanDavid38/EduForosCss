@@ -89,17 +89,53 @@ $("#mostrar_videoconferencias").on("click", function() {
   $("#cartas_crear_video_docente").hide();
     $("#formulario_registro_foros_docente").hide();
   $("#formulario_programar_video_docente").hide();
+  // $("#formulario_programar_video_docente").hide();
 
 });
 
 
 
 
+$("#perfil_config_docente").on("click", function() {
+  $("#modal_config_docente").show();
+  $("#cartas_ver_video_docente").hide();
+  $("#cartas_foros_docente").hide();
+  $("#cartas_cursos_asignados_docente").hide();
+  $("#cartas_asignaturas_asignados_docente").hide();
+$("#cartas_crear_video_docente").hide();
+  $("#formulario_registro_foros_docente").hide();
+$("#formulario_programar_video_docente").hide();
+
+});
 
 
 
+// funcionamiento del modal visualizar mi perfil, sección docente
+// Get the modal
+var modal = document.getElementById("modal_config_docente");
 
+// Get the button that opens the modal
+var btn = document.getElementById("perfil_config_docente");
 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closeModalPerfil_docente")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 /* script.js */
 
@@ -122,23 +158,7 @@ $("#mostrar_videoconferencias").on("click", function() {
 // });
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     const prevBtn = document.querySelector(".prev");
-//     const nextBtn = document.querySelector(".next");
-//     const carouselInner = document.querySelector(".carousel-inner");
-//     const carouselItems = document.querySelectorAll(".carousel-item");
-
-//     let currentIndex = 0;
-//     let intervalId;
-
-//     // Función para avanzar al siguiente slide
-//     function nextSlide() {
-//         currentIndex++;
-//         if (currentIndex >= carouselItems.length) {
-//             currentIndex = 0;
-//         }
-//         updateCarousel();
-//     }
+//
 // document.addEventListener("DOMContentLoaded", function() {
 //     const userIcon = document.getElementById("userIcon");
 //     const dropdownContent = document.getElementById("dropdownContent");
@@ -152,83 +172,6 @@ $("#mostrar_videoconferencias").on("click", function() {
 //     });
 
     
-    // // Función para actualizar el carrusel
-    // function updateCarousel() {
-    //     const itemWidth = carouselItems[currentIndex].clientWidth;
-    //     carouselInner.style.transform = `translateX(-${itemWidth * currentIndex}px)`;
-    // }
-
-    // // Botón para avanzar al siguiente slide
-    // nextBtn.addEventListener("click", function() {
-    //     nextSlide();
-    //     clearInterval(intervalId); // Detener el intervalo cuando se hace clic manualmente
-    // });
-
-    // // Botón para retroceder al slide anterior
-    // prevBtn.addEventListener("click", function() {
-    //     currentIndex--;
-    //     if (currentIndex < 0) {
-    //         currentIndex = carouselItems.length - 1;
-    //     }
-    //     updateCarousel();
-    //     clearInterval(intervalId); // Detener el intervalo cuando se hace clic manualmente
-    // });
-
-    // // Iniciar el carrusel automáticamente cada 3 segundos
-    // intervalId = setInterval(nextSlide, 3000);
- // Array de objetos que representan las cartas
-//  const cardsData = [
-//     {
-//         imageUrl: "https://via.placeholder.com/300",
-//         title: "Card 1",
-//         description: "Description for Card 1."
-//     },
-//     {
-//         imageUrl: "https://via.placeholder.com/300",
-//         title: "Card 2",
-//         description: "Description for Card 2."
-//     },
-//     {
-//         imageUrl: "https://via.placeholder.com/300",
-//         title: "Card 3",
-//         description: "Description for Card 3."
-//     },
-//     {
-//         imageUrl: "https://via.placeholder.com/300",
-//         title: "Card 4",
-//         description: "Description for Card 3."
-//     },
-//     {
-//         imageUrl: "https://via.placeholder.com/300",
-//         title: "Card 5",
-//         description: "Description for Card 3."
-//     },
-//     {
-//         imageUrl: "https://via.placeholder.com/300",
-//         title: "Card 6",
-//         description: "Description for Card 3."
-//     }
-// ];
-
-// // Selecciona el contenedor de las cartas
-// const cardContainer = document.getElementById('card-container');
-
-
-// // Genera el HTML de las cartas dinámicamente
-// for (let i = 0; i < cardsData.length; i++) {
-//     const cardData = cardsData[i];
-//     const cardHtml = `
-//         <div class="card">
-//             <img src="${cardData.imageUrl}" alt="${cardData.title}">
-//             <h2>${cardData.title}</h2>
-//             <p>${cardData.description}</p>
-//         </div>
-//     `;
-//     // Agrega el HTML de la carta al contenedor
-//     cardContainer.innerHTML += cardHtml;
-// // }
-
-
 
 
 
