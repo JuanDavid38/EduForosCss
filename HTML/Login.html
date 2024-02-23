@@ -90,6 +90,104 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+    <!-- Login envio de codigo al correo -recuperar contraseña -->
+  <div class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded shadow-md max-w-md w-full">
+
+      <h2 class="text-2xl mb-4 text-center">Recuperación de Contraseña</h2>
+
+      <form id="loginForm">
+        <div class="mb-4">
+          <label for="email" class="block text-sm font-semibold text-gray-600">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" class="w-full mt-1 p-2 border rounded-md" required>
+        </div>
+
+        <button type="button" onclick="enviarSolicitud()"
+          class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Enviar Solicitud</button>
+      </form>
+
+    </div>
+  </div>
+
+  <script>
+    function enviarSolicitud() {
+      var email = document.getElementById("email").value;
+      var recoveryEmail = document.getElementById("recoveryEmail").value;
+
+      if (email && recoveryEmail) {
+        alert("Solicitud enviada para: " + recoveryEmail);
+      } else {
+        alert("Por favor, completa todos los campos.");
+      }
+    }
+  </script>
+
+
+   <!-- Login para ingresar contraseña nueva -->
+  <div class="bg-gray-100 h-screen flex items-center justify-center">
+    <div class="bg-white p-8 rounded shadow-md max-w-md w-full">
+
+      <h2 class="text-2xl mb-4 text-center">Recuperación de Contraseña</h2>
+
+      <form id="passwordForm">
+        <div class="mb-4">
+          <label for="newPassword" class="block text-sm font-semibold text-gray-600">Nueva Contraseña:</label>
+          <input type="password" id="newPassword" name="newPassword" class="w-full mt-1 p-2 border rounded-md" required>
+        </div>
+
+        <div class="mb-4">
+          <label for="confirmPassword" class="block text-sm font-semibold text-gray-600">Confirmar Contraseña:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" class="w-full mt-1 p-2 border rounded-md"
+            required>
+        </div>
+
+        <div class="mb-4 flex items-center">
+          <input type="checkbox" id="showPassword" class="mr-2">
+          <label for="showPassword" class="text-sm text-gray-600">Mostrar Contraseñas</label>
+        </div>       
+
+        <button type="button" onclick="enviarSolicitud()"
+          class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Enviar</button>
+      </form>
+
+    </div>
+  </div>
+  <script>
+    function togglePasswordVisibility() {
+      var newPasswordInput = document.getElementById("newPassword");
+      var confirmPasswordInput = document.getElementById("confirmPassword");
+      var showPasswordCheckbox = document.getElementById("showPassword");
+
+      if (showPasswordCheckbox.checked) {
+        newPasswordInput.type = "text";
+        confirmPasswordInput.type = "text";
+      } else {
+        newPasswordInput.type = "password";
+        confirmPasswordInput.type = "password";
+      }
+    }
+
+    function enviarSolicitud() {
+      var newPassword = document.getElementById("newPassword").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+
+      if (newPassword && confirmPassword) {
+        if (newPassword === confirmPassword) {
+          alert("Solicitud enviada para cambiar la contraseña.");
+        } else {
+          alert("Las contraseñas no coinciden. Por favor, verifica.");
+        }
+      } else {
+        alert("Por favor, completa todos los campos.");
+      }
+    }
+  </script>
+
 </body>
 
 </html>
