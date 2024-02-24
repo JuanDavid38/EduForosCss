@@ -10,6 +10,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    $("#contenedor_Ver_RespuestasForo").hide();
+    $("#btn_mostrar_respuestas").on("click", function() {
+      $("#contenedor_Ver_RespuestasForo").show();
+      $("#cartas_foros_docente").show();
+      $("#cartas_cursos_asignados_docente").hide();
+      $("#cartas_asignaturas_asignados_docente").hide();
+    $("#cartas_crear_video_docente").hide();
+      $("#cartas_ver_video_docente").hide();
+      $("#formulario_registro_foros_docente").hide();
+    $("#formulario_programar_video_docente").hide();
+  
+  });
     // seccion docentes
 $("#formulario_registro_foros_docente").hide();
 $("#crear_foro").on("click", function() {
@@ -223,5 +235,46 @@ window.onclick = function(event) {
 //         }
 //       });
 // });
+$("#btn_eliminar_foros").on("click", function() {
+      Swal.fire({
+          title: "Desea eliminar el foro?",
+          text: "Confirmar la eliminación",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Eliminar!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({
+              title: "Eliminado!",
+              text: "Foro eliminado.",
+              icon: "success"
+            });
+          }
+        });
+  });
+
+  
+  $("#btn_enviar_calificacion").on("click", function() {
+    Swal.fire({
+        title: "Desea enviar la calificación?",
+        text: "Confirmar el envio",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Enviar!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Enviado!",
+            text: "Calificación enviada.",
+            icon: "success"
+          });
+        }
+      });
+});
+
 
 });

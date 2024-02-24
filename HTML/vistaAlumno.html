@@ -9,6 +9,7 @@
     <script src="../JS/seccionAlumnos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="https://kit.fontawesome.com/6be6f14cdc.js" crossorigin="anonymous"></script>
 </head>
@@ -172,7 +173,6 @@
                 <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
                 <h2>Curso</h2><br>
                 <p>1001</p><br>
-                <button class="button">Visualizar</button>
             </div>
 
         </div>
@@ -304,6 +304,7 @@
                   
             <div id="contenedor_respuestas"class="modal-content">
                 <form class="space-y-4">
+                    <h2>Ingresar nueva respuesta</h2>
                     <div id="contenedor_respuesta" class="border border-gray-300 rounded p-2">
                         <input type="text" placeholder="Ingrese la respuesta" class="border border-gray-300 rounded w-full p-2">
                     </div>
@@ -314,8 +315,57 @@
                     </button>
                 </form>
             </div>
-            
+            <!-- <div id="contenedor_respuestasubida_estudiante"class="modal-content">
+                <label>Respuesta 1</label>
+                <p>sfdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                    <div id="contenedor_multimedia_respuesta_Estudiante">
+                        <img src="../images/vector.jpg" alt="">
+                    </div>
+                    <br>
+                    <img id="img_like" src="../images/like.png" ><br><br>
+                    <input  class="border border-gray-300 rounded w-full p-2" type="text"><br><button class="bg-green-300 hover:bg-green-500 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    Comentar
+                </button>
+        </div> -->
+        <div id="contenedor_respuestasubida_estudiante"class="modal-content">
+            <!-- <label>Comentario</label><br> -->
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+              Titulo
+            </label><br>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+              Fecha de subida
+            </label><br>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+              Comentario
+            </label><br>
+  
+          <div id="contenedor_multimedia_respuesta_Estudiante">
+              <img src="../images/vector.jpg" alt="">
+          </div>
+          <br>
+          <img id="img_like" src="../images/like.png" ><br>
+          <form>
+          <input  class="border border-gray-300 rounded w-full p-2" type="text" placeholder="Comentar a compañero"><br><br>
+  
+          <button class="bg-green-300 hover:bg-green-500 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit" id="btn_enviar_comentario_compañero">
+          Comentar
+      </button>
+      <button
+      class="bg-yellow-300 shadow-lg shadow-yellow-300/50 ... hover:bg-yellow-500 shadow-lg shadow-yellow-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+      type="button">
+      Editar
+    </button>
+    <button
+                class="bg-red-300 shadow-lg shadow-red-300/50 ... hover:bg-red-500 shadow-lg shadow-red-500/50 ...  text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                type="button" id="btn_eliminar_foros">
+                Eliminar
+              </button>
+    </form>
 
+
+    </div>
     <!-- <footer>
         <p>Derechos de autor &copy; 2024 - Nombre de tu empresa</p>
     </footer> -->

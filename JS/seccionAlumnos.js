@@ -101,4 +101,24 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+$("#btn_enviar_comentario_compañero").on("click", function() {
+  Swal.fire({
+      title: "Desea enviar el comentario?",
+      text: "Confirmar el envio",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Enviar!"
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          title: "Enviado!",
+          text: "comentario enviado.",
+          icon: "success"
+        });
+      }
+    });
+});
 });
