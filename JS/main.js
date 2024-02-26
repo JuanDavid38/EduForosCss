@@ -10,6 +10,18 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    $("#contenedor_Ver_RespuestasForo").hide();
+    $("#btn_mostrar_respuestas").on("click", function() {
+      $("#contenedor_Ver_RespuestasForo").show();
+      $("#cartas_foros_docente").show();
+      $("#cartas_cursos_asignados_docente").hide();
+      $("#cartas_asignaturas_asignados_docente").hide();
+    $("#cartas_crear_video_docente").hide();
+      $("#cartas_ver_video_docente").hide();
+      $("#formulario_registro_foros_docente").hide();
+    $("#formulario_programar_video_docente").hide();
+  
+  });
     // seccion docentes
 $("#formulario_registro_foros_docente").hide();
 $("#crear_foro").on("click", function() {
@@ -137,6 +149,32 @@ window.onclick = function(event) {
   }
 }
 
+// funcionamiento del modal visualizar cursos, sección estudiante
+// Get the modal
+var modal = document.getElementById("modalVerInfoForos");
+
+// Get the button that opens the modal
+var btn = document.getElementById("buttonVerInfoForos");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("closeModalVerForos")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 /* script.js */
 
 // document.addEventListener("DOMContentLoaded", function() {
@@ -197,5 +235,46 @@ window.onclick = function(event) {
 //         }
 //       });
 // });
+$("#btn_eliminar_foros").on("click", function() {
+      Swal.fire({
+          title: "Desea eliminar el foro?",
+          text: "Confirmar la eliminación",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Eliminar!"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({
+              title: "Eliminado!",
+              text: "Foro eliminado.",
+              icon: "success"
+            });
+          }
+        });
+  });
+
+  
+  $("#btn_enviar_calificacion").on("click", function() {
+    Swal.fire({
+        title: "Desea enviar la calificación?",
+        text: "Confirmar el envio",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Enviar!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            title: "Enviado!",
+            text: "Calificación enviada.",
+            icon: "success"
+          });
+        }
+      });
+});
+
 
 });

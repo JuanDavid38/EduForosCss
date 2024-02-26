@@ -9,6 +9,7 @@
     <script src="../JS/seccionAlumnos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script src="https://kit.fontawesome.com/6be6f14cdc.js" crossorigin="anonymous"></script>
 </head>
@@ -47,7 +48,8 @@
                     <div class="grid grid-flow-row gap-3">
                         <div class="sm:grid sm:grid-cols-2 gap-3">
                             <div class="sm:col-span-1">
-                                <label class="block text-gray-700 text-sm font-bold mb-2" for="foto"> Foto
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="foto"> 
+                                    Foto
                                 </label>
                                 <input
                                     class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -137,13 +139,18 @@
         </ul>
     </div> -->
     <aside id="menu">
-        <h2>Menú</h2><br><br><br>
+        <br><br><br>
         <ul>
 
             <li><a id="#">Cursos asignado</a>
                 <div class="submenu">
                     <a id="ver_curso_estudiante">ver curso</a><br><br>
                     <!-- <a href="#">Mostrar cursos</a> -->
+                </div>
+            </li><br><br>
+            <li><a id="#">Foros</a>
+                <div class="submenu">
+                    <a id="ver_foros_estudiante">ver foros</a><br><br>
                 </div>
             </li><br><br>
             <li><a id="#">Videoconferencias</a>
@@ -153,7 +160,6 @@
             </li>
         </ul>
     </aside>
-    <main>
 
         <!-- <section>
             <h2>Otra Sección</h2>
@@ -167,7 +173,6 @@
                 <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
                 <h2>Curso</h2><br>
                 <p>1001</p><br>
-                <button class="button">Visualizar</button>
             </div>
 
         </div>
@@ -183,8 +188,184 @@
 
         </div>
 
-    </main>
+        <div id="estudiante_cards_foros">
+            <!-- Las cartas se agregarán aquí dinámicamente -->
+            <div class="card">
+                <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+                <h2>Titulo Foros</h2><br>
+                <p>descripcion del foro</p><br>
+                <!-- <button class="button">Visualizar</button> -->
+                <button id="buttonVerInfoForos_estudiante" class="button">Visualizar</button>
+            
+                <!-- The Modal -->
+                <div id="modalVerInfoForos_estudiante" class="modal">
+            
+                  <!-- Modal content -->
+                  <div class="modal-content">
+                    <span class="closeModalEstudianteforo">&times;</span>
+                    <img id="img_modal" src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+                    <h2>Estudiante</h2><br>
+                    <p>Grado</p><br>
+                    <form id="formulario_ver_foro_estudiante" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
+                      <!-- Título del formulario -->
+                      <h2 class="text-2xl mb-4 text-center font-bold">Foro activo</h2>
+                
+                      <!-- Primer par de campos -->
+                      <div class="mb-4 flex flex-col md:flex-row">
+                        <div class="mb-4 md:mr-2 md:w-1/2">
+                          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentType">
+                            Titulo
+                          </label>
+                          <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="Asignatura" type="text"  disabled/>
+                        </div>
+                        <div class="mb-4 md:ml-2 md:w-1/2">
+                          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentNumber">
+                            Descripción
+                          </label>
+                          <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="Curso" type="text" disabled />
+                        </div>
+                      </div>
+                
+                      <!-- Segundo par de campos -->
+                      <div class="mb-4 flex flex-col md:flex-row">
+                        <div class="mb-4 md:mr-2 md:w-1/2">
+                          <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+                            Curso
+                          </label>
+                          <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="Titulo" type="text" disabled />
+                        </div>
+                        <div class="mb-4 md:ml-2 md:w-1/2">
+                          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+                            Fecha de Inicio
+                          </label>
+                          <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="fecha_inicio" type="date" disabled />
+                        </div>
+                      </div>
+                      <!-- Primer par de campos -->
+                      <div class="mb-4 flex flex-col md:flex-row">
+                        <div class="mb-4 md:mr-2 md:w-1/2">
+                          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentType">
+                            Fecha de finalización
+                          </label>
+                          <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="fecha_fin" type="date" disabled />
+                        </div>
+                        <div class="mb-4 md:ml-2 md:w-1/2">
+                          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentNumber">
+                            Calificable
+                          </label>
+                          <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="Calificable" type="text" disabled />
+                        </div>
+                      </div>
+                
+                      <!-- Tercer par de campos -->
+                      <div class="mb-4 flex flex-col md:flex-row">
+                        <div class="mb-4 md:mr-2 md:w-1/2">
+                          <label class="block text-gray-700 text-sm font-bold mb-2" for="age">
+                            Asignatura
+                          </label>
+                          <input
+                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="Descripción" type="text"  disabled/>
+                        </div>
+                        <div class="mb-4 md:mr-2 md:w-1/2">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="age">
+                              Estado
+                            </label>
+                            <input
+                              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                              id="Descripción" type="text" disabled />
+                          </div>
+                      </div>
+                
+                      <!-- Botones -->
+                      <div class="flex items-center justify-between">
+                        <button
+                          class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                          type="button" id="responder_foro">
+                          Responder
+                        </button>
+                  </div>
+                       
+                    </form>
 
+                    
+                  
+            <div id="contenedor_respuestas"class="modal-content">
+                <form class="space-y-4">
+                    <h2>Ingresar nueva respuesta</h2>
+                    <div id="contenedor_respuesta" class="border border-gray-300 rounded p-2">
+                        <input type="text" placeholder="Ingrese la respuesta" class="border border-gray-300 rounded w-full p-2">
+                    </div>
+                    <input type="file" name="Escoger" id="" class="border border-gray-300 rounded p-2">
+                    <button class="bg-green-300 hover:bg-green-500 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        type="submit">
+                        Responder
+                    </button>
+                </form>
+            </div>
+            <!-- <div id="contenedor_respuestasubida_estudiante"class="modal-content">
+                <label>Respuesta 1</label>
+                <p>sfdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+                    <div id="contenedor_multimedia_respuesta_Estudiante">
+                        <img src="../images/vector.jpg" alt="">
+                    </div>
+                    <br>
+                    <img id="img_like" src="../images/like.png" ><br><br>
+                    <input  class="border border-gray-300 rounded w-full p-2" type="text"><br><button class="bg-green-300 hover:bg-green-500 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    Comentar
+                </button>
+        </div> -->
+        <div id="contenedor_respuestasubida_estudiante"class="modal-content">
+            <!-- <label>Comentario</label><br> -->
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+              Titulo
+            </label><br>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+              Fecha de subida
+            </label><br>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+              Comentario
+            </label><br>
+  
+          <div id="contenedor_multimedia_respuesta_Estudiante">
+              <img src="../images/vector.jpg" alt="">
+          </div>
+          <br>
+          <img id="img_like" src="../images/like.png" ><br>
+          <form>
+          <input  class="border border-gray-300 rounded w-full p-2" type="text" placeholder="Comentar a compañero"><br><br>
+  
+          <button class="bg-green-300 hover:bg-green-500 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          type="submit" id="btn_enviar_comentario_compañero">
+          Comentar
+      </button>
+      <button
+      class="bg-yellow-300 shadow-lg shadow-yellow-300/50 ... hover:bg-yellow-500 shadow-lg shadow-yellow-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+      type="button">
+      Editar
+    </button>
+    <button
+                class="bg-red-300 shadow-lg shadow-red-300/50 ... hover:bg-red-500 shadow-lg shadow-red-500/50 ...  text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                type="button" id="btn_eliminar_foros">
+                Eliminar
+              </button>
+    </form>
+
+
+    </div>
     <!-- <footer>
         <p>Derechos de autor &copy; 2024 - Nombre de tu empresa</p>
     </footer> -->
