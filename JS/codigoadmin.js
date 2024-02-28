@@ -1,4 +1,4 @@
-// funcionamiento del modal editar, sección administrador
+  // funcionamiento del modal editar, sección administrador
   // Get the modal
   var modal = document.getElementById("modalEditar");
 

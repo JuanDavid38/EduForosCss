@@ -11,6 +11,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://kit.fontawesome.com/6be6f14cdc.js" crossorigin="anonymous"></script>
   <link rel=”stylesheet” media="(max-width: 800px)" href=”example.css” />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <body>
@@ -497,6 +499,7 @@
       <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
       <h2>Foro</h2><br>
       <p>DESCRIPCIÓN_DE_FORO</p><br>
+      <p>Info foro</p><br>
       <!-- <button class="button">Visualizar</button> -->
       <button id="buttonVerInfoForos" class="button">Ver Foro</button>
 
@@ -615,12 +618,11 @@
 
             <!-- Botones -->
             <div class="flex items-center justify-between">
-              <button
+              <!-- <button
                 class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
                 type="button">
                 Respuestas
-                
-              </button>
+              </button> -->
               <button
                 class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
                 type="button">
@@ -633,8 +635,9 @@
               </button>
               <button
                 class="bg-red-300 shadow-lg shadow-red-300/50 ... hover:bg-red-500 shadow-lg shadow-red-500/50 ...  text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-                type="button">
+                type="button" id="btn_eliminar_foros">
                 Eliminar
+              </button>
 
           </form>
         </div>
@@ -642,6 +645,52 @@
 
 
 
+
+        <div id="contenedor_Ver_RespuestasForo"class="modal-content">
+          <!-- <label>Comentario</label><br> -->
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+            Titulo
+          </label><br>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+            Fecha inicio
+          </label><br>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+            Fecha final
+          </label><br>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+            Comentario
+          </label><br>
+
+        <div id="contenedor_multimedia_respuesta_Estudiante">
+            <img src="../images/vector.jpg" alt="">
+        </div>
+        <br>
+        <img id="img_like" src="../images/like.png" ><br>
+        <form>
+        <input required class="border border-gray-300 rounded w-full p-2" type="text" placeholder="Calificación"><br><br>
+        <input  class="border border-gray-300 rounded w-full p-2" type="text" placeholder="Comentario docente"><br><br>
+
+        <button class="bg-green-300 hover:bg-green-500 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="submit" id="btn_enviar_calificacion">
+        Enviar calificación
+    </button>
+  </form>
+  </div>
+
+  <!-- <div id="contenedor_Ver_RespuestasForo"class="modal-content">
+    <label>Comentario</label><br>
+        <div id="contenedor_multimedia_respuesta_Estudiante">
+            <img src="../images/vector.jpg" alt="">
+        </div>
+        <br>
+        <img id="img_like" src="../images/like.png" ><br>
+        <input  class="border border-gray-300 rounded w-full p-2" type="text" placeholder="Calificación"><br><br>
+        <button class="bg-green-300 hover:bg-green-500 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="submit">
+        Comentar
+    </button>
+</div> -->
+<!-- </div> -->
 
 
 

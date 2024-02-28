@@ -182,7 +182,8 @@ aside ul li a:hover {
 #cont_card,#cursos_asignados_cards,#cursos_videoconferencias_cards,#cartas_foros_docente
 ,#cartas_cursos_asignados_docente,#cartas_asignaturas_asignados_docente
 ,#cartas_crear_video_docente,#cartas_ver_video_docente,#estudiante_cards_foros,
-#cont_card_docentes,#cont_card_administradores,#cont_card_curso,#cont_card_Asignatura{
+#cont_card_docentes,#cont_card_administradores,#cont_card_curso,#cont_card_Asignatura
+,#cartas_crear_video_docente,#cartas_ver_video_docente,#estudiante_cards_foros,#cont_card_docentes,#cont_card_administradores,#cont_card_Curso,#cont_card_Asignatura {
     display: flex; /* Usa Flexbox */
     flex-wrap: wrap; /* Envuelve las cartas cuando no haya suficiente espacio */
     justify-content: center; /* Centra las cartas horizontalmente */
@@ -280,7 +281,8 @@ button:active {
  
   /* The Close Button */
   .close,.closeProfesor,.close,.closeModalEdit,.closeModalEstudianteCurso,.closeModalPerfil_docente,
-  .closeCurso,.closeModalPerfil_administrador,.closeModalPerfil_alumno,.closeAdmin,.closeModalVerForos,.closeModalEstudianteforo {
+  .closeCurso,.closeModalPerfil_administrador,.closeModalPerfil_alumno,.closeAdmin,.closeModalVerForos,.closeModalEstudianteforo 
+  .close,.closeProfesor,.closeModalEdit,.closeModalEstudianteCurso,.closeModalPerfil_docente,.closeCurso,.closeModalPerfil_administrador,.closeModalPerfil_alumno,.closeAdmin,.closeModalVerForos,.closeModalEstudianteforo {
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -310,7 +312,8 @@ button:active {
 /* formulario dentro de las cartas*/
   #formulario_visualizar_docente,#formulario_visualizar_usuario,#formulario_visualizar_alumno,
   #formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,
-  #formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador {
+  #formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador 
+  #formulario_visualizar_docente,#formulario_visualizar_usuario,#formulario_visualizar_docente,#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador {
     max-width: 1000px; /* Reducir el ancho máximo del formulario */
     margin-left: 380px;
     padding: 20px; /* Añadir un poco de espacio alrededor del formulario */
@@ -319,19 +322,22 @@ button:active {
 
 
 #formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#modalVerInfoForos,#formulario_visualizar_usuario,
-#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .mb-4 {
+#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .mb-4 
+ #formulario_visualizar_docente,#formulario_visualizar_usuario,#formulario_visualizar_docente,#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .mb-4 {
     margin-bottom: 10px; /* Reducir el espacio entre cada campo del formulario */
 }
 
 
 #formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,
-#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .block {
+#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .block 
+ #formulario_visualizar_docente,#formulario_visualizar_usuario,#formulario_visualizar_docente,#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .block {
     margin-bottom: 5px; /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
 }
 
 
 #formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,
-#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .rounded {
+#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .rounded 
+ #formulario_visualizar_docente,#formulario_visualizar_usuario,#formulario_visualizar_docente,#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .rounded {
     border-radius: 4px; /* Redondear los bordes de los campos de entrada */
 }
 
@@ -356,7 +362,18 @@ button:active {
     margin-left: 200px;
 }
 
-
+#contenedor_respuestas_alumno,#contenedor_respuestasubida_estudiante,#contenedor_respuestasubida_alumno {
+    border: 1px solid black; /* 1px de ancho, sólido y de color negro */
+    border-radius: 5px;
+    margin-bottom: 80px;
+}
+#contenedor_multimedia_respuesta_Estudiante{
+    width: 50px;
+    height: 50px;
+}
+#img_like{
+    width: 20px;
+}
 
 
 
@@ -463,7 +480,7 @@ button:active {
   
 #cont_card,#cursos_asignados_cards,#cursos_videoconferencias_cards,#cartas_foros_docente
 ,#cartas_cursos_asignados_docente,#cartas_asignaturas_asignados_docente
-,#cartas_crear_video_docente,#cartas_ver_video_docente,#estudiante_cards_foros {
+,#cartas_crear_video_docente,#cartas_ver_video_docente,#estudiante_cards_foros,#cont_card_docentes {
     justify-content: center; /* Centra las cartas horizontalmente */
     max-width: 1300px; /* Establece el ancho máximo del contenedor */
     padding: 80px; /* Agrega un poco de espacio alrededor del contenedor */
