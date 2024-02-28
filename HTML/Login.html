@@ -17,15 +17,14 @@
     <div class="container mx-auto flex items-center justify-between">
       <h1 class="text-white text-3xl font-semibold">Bienvenid@</h1>
       <nav class="space-x-4">
-        <h1 class="text-white text-2xl font-semibold">Inicio de sesion</h1>
+        <img src="../images/LogoEduForos4.PNG" alt="Icono de usuario" style="width: 100px; height: 100px; border-radius: 50%;">
       </nav>
     </div>
-</header>
-  
+</header> 
 
 
 <div class="flex items-center justify-center min-h-screen bg-gray-100">
-  <div class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0">
+  <div id="Login" class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0">
       <!-- left side -->
       <div class="flex flex-col justify-center p-8 md:p-16">
           <span class="mb-3 text-4xl font-bold">EDUFOROS</span>
@@ -62,25 +61,6 @@
             </div>
           </div>
 
-          <script>
-            function mostrarContrasena() {
-              var campoContrasena = document.getElementById("password");
-
-              // Si el campo está vacío, mantenerlo como tipo "password"
-              if (campoContrasena.value === "") {
-                campoContrasena.type = "password";
-              }
-            }
-
-            function toggleMostrarContrasena() {
-              var campoContrasena = document.getElementById("password");
-
-              // Cambiar dinámicamente entre tipo "password" y "text"
-              campoContrasena.type = (campoContrasena.type === "password") ? "text" : "password";
-            }
-          </script>
-
-
           <div class="flex justify-between w-full py-4">
             <div class="mr-24">
               <a class="text-blue-800 hover:text-blue-400" href="">Olvido su Contraseña?</a>
@@ -98,8 +78,7 @@
 
       <div class="relative">
         <video id="contenedorVideoLogin" autoplay muted loop class="w-[400px] h-full hidden rounded-r-2xl md:block object-cover">
-          <source src="../images/FondoLogin.mp4" type="video/mp4">
-          Tu navegador no soporta el elemento de video.
+          <source src="../images/FondoLogin.mp4" type="video/mp4">          
       </video>
         <div
           class="absolute hidden bottom-10 right-2 p-6 bg-white bg-opacity-30 backdrop-blur-sm rounded drop-shadow-lg md:block">
@@ -108,104 +87,6 @@
       </div>
     </div>
   </div>
-
-
-
-
-
-  <!-- Login envio de codigo al correo -recuperar contraseña -->
-  <div class="bg-gray-100 h-screen flex items-center justify-center">
-    <div class="bg-white p-8 rounded shadow-md max-w-md w-full">
-
-      <h2 class="text-2xl mb-4 text-center">Recuperación de Contraseña</h2>
-
-      <form id="loginForm">
-        <div class="mb-4">
-          <label for="email" class="block text-sm font-semibold text-gray-600">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" class="w-full mt-1 p-2 border rounded-md" required>
-        </div>
-
-        <button type="button" onclick="enviarSolicitud()"
-          class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Enviar Solicitud</button>
-      </form>
-
-    </div>
-  </div>
-
-  <script>
-    function enviarSolicitud() {
-      var email = document.getElementById("email").value;
-      var recoveryEmail = document.getElementById("recoveryEmail").value;
-
-      if (email && recoveryEmail) {
-        alert("Solicitud enviada para: " + recoveryEmail);
-      } else {
-        alert("Por favor, completa todos los campos.");
-      }
-    }
-  </script>
-
-
-  <!-- Login para ingresar contraseña nueva -->
-  <div class="bg-gray-100 h-screen flex items-center justify-center">
-    <div class="bg-white p-8 rounded shadow-md max-w-md w-full">
-
-      <h2 class="text-2xl mb-4 text-center">Recuperación de Contraseña</h2>
-
-      <form id="passwordForm">
-        <div class="mb-4">
-          <label for="newPassword" class="block text-sm font-semibold text-gray-600">Nueva Contraseña:</label>
-          <input type="password" id="newPassword" name="newPassword" class="w-full mt-1 p-2 border rounded-md" required>
-        </div>
-
-        <div class="mb-4">
-          <label for="confirmPassword" class="block text-sm font-semibold text-gray-600">Confirmar Contraseña:</label>
-          <input type="password" id="confirmPassword" name="confirmPassword" class="w-full mt-1 p-2 border rounded-md"
-            required>
-        </div>
-
-        <div class="mb-4 flex items-center">
-          <input type="checkbox" id="showPassword" class="mr-2">
-          <label for="showPassword" class="text-sm text-gray-600">Mostrar Contraseñas</label>
-        </div>
-
-        <button type="button" onclick="enviarSolicitud()"
-          class="w-full bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600">Enviar</button>
-      </form>
-
-    </div>
-  </div>
-  <script>
-    function togglePasswordVisibility() {
-      var newPasswordInput = document.getElementById("newPassword");
-      var confirmPasswordInput = document.getElementById("confirmPassword");
-      var showPasswordCheckbox = document.getElementById("showPassword");
-
-      if (showPasswordCheckbox.checked) {
-        newPasswordInput.type = "text";
-        confirmPasswordInput.type = "text";
-      } else {
-        newPasswordInput.type = "password";
-        confirmPasswordInput.type = "password";
-      }
-    }
-
-    function enviarSolicitud() {
-      var newPassword = document.getElementById("newPassword").value;
-      var confirmPassword = document.getElementById("confirmPassword").value;
-
-      if (newPassword && confirmPassword) {
-        if (newPassword === confirmPassword) {
-          alert("Solicitud enviada para cambiar la contraseña.");
-        } else {
-          alert("Las contraseñas no coinciden. Por favor, verifica.");
-        }
-      } else {
-        alert("Por favor, completa todos los campos.");
-      }
-    }
-  </script>
-
 </body>
 
 </html>

@@ -107,6 +107,19 @@ $("#cartas_crear_video_docente").hide();
 $("#formulario_programar_video_docente").hide();
 
 });
+  $("#formulario_Editar_foros_docente").hide();
+
+$("#btn_editar_foros").on("click", function() {
+  $("#formulario_Editar_foros_docente").show();
+  $("#cartas_ver_video_docente").hide();
+  $("#cartas_foros_docente").hide();
+  $("#cartas_cursos_asignados_docente").hide();
+  $("#cartas_asignaturas_asignados_docente").hide();
+$("#cartas_crear_video_docente").hide();
+  $("#formulario_registro_foros_docente").hide();
+$("#formulario_programar_video_docente").hide();
+
+});
 
 
 
