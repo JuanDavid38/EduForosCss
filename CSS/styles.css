@@ -1,6 +1,4 @@
-
-
-        /* @media screen and (min-width:500px){} */
+/* @media screen and (min-width:500px){} */
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
@@ -47,10 +45,11 @@ nav ul li a:hover {
 
 
 #contenedorImgLogin:hover {
-        -webkit-transform: rotateY(180deg);
-        -webkit-transform-style: preserve-3d;
-        transform: rotateY(180deg);
-        transform-style: preserve-3d;}
+    -webkit-transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+}
 
 
 
@@ -58,7 +57,8 @@ nav ul li a:hover {
 aside {
     background-color: #f4f4f4;
     padding: 20px;
-    width: 200px; /* Ancho del menú lateral */
+    width: 200px;
+    /* Ancho del menú lateral */
 }
 
 
@@ -73,7 +73,7 @@ aside ul li {
 }
 
 
-aside ul li a  {
+aside ul li a {
     color: #333;
     text-decoration: none;
 }
@@ -92,6 +92,7 @@ aside ul li a:hover {
     .panel {
         flex-direction: column;
     }
+
     aside {
         width: 100%;
         margin-bottom: 20px;
@@ -115,7 +116,7 @@ aside ul li a:hover {
 
 #menu.active {
     display: block;
-   
+
 }
 
 
@@ -141,7 +142,7 @@ aside ul li a:hover {
     border-radius: 0 4px 4px 4px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     margin-bottom: 50px;
-   
+
 }
 
 
@@ -149,7 +150,7 @@ aside ul li a:hover {
     display: block;
 }
 
-#Login{
+#Login {
     margin-top: -200px;
 
 }
@@ -160,7 +161,7 @@ aside ul li a:hover {
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
     right: -20px;
 }
@@ -179,21 +180,107 @@ aside ul li a:hover {
 }
 
 
-#cont_card,#cursos_asignados_cards,#cursos_videoconferencias_cards,#cartas_foros_docente
-,#cartas_cursos_asignados_docente,#cartas_asignaturas_asignados_docente
-,#cartas_crear_video_docente,#cartas_ver_video_docente,#estudiante_cards_foros,
-#cont_card_docentes,#cont_card_alumnos,#cont_card_curso,#cont_card_Asignatura
-,#cartas_crear_video_docente,#cartas_ver_video_docente,#estudiante_cards_foros,#cont_card_docentes,#cont_card_alumnos,#cont_card_Curso,#cont_card_Asignatura {
-    display: flex; /* Usa Flexbox */
-    flex-wrap: wrap; /* Envuelve las cartas cuando no haya suficiente espacio */
-    justify-content: center; /* Centra las cartas horizontalmente */
-    max-width: 1300px; /* Establece el ancho máximo del contenedor */
-    margin: -280px auto 0; /* Centra el contenedor horizontalmente */
-    padding: 20px; /* Agrega un poco de espacio alrededor del contenedor */
-    margin-left: 420px; /* Mueve el contenedor un poco a la derecha */
-    margin-top: -830px;
+
+#cont_card,
+#cursos_asignados_cards,
+#cursos_videoconferencias_cards,
+#cartas_foros_docente,
+#cartas_cursos_asignados_docente,
+#cartas_asignaturas_asignados_docente,
+#cartas_crear_video_docente,
+#cartas_ver_video_docente,
+#estudiante_cards_foros,
+#cartas_crear_video_docente,
+#cartas_ver_video_docente,
+#estudiante_cards_foros {
+    display: flex;
+    /* Usa Flexbox */
+    flex-wrap: wrap;
+    /* Envuelve las cartas cuando no haya suficiente espacio */
+    justify-content: center;
+    /* Centra las cartas horizontalmente */
+    max-width: 1300px;
+    /* Establece el ancho máximo del contenedor */
+    margin: -280px auto 0;
+    /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    /* Agrega un poco de espacio alrededor del contenedor */
+    margin-left: 420px;
+    /* Mueve el contenedor un poco a la derecha */
+    margin-top: -550px;
 }
 
+#cont_card_Asignatura {
+    display: flex;
+    /* Usa Flexbox */
+    flex-wrap: wrap;
+    /* Envuelve las cartas cuando no haya suficiente espacio */
+    justify-content: center;
+    /* Centra las cartas horizontalmente */
+    max-width: 1300px;
+    /* Establece el ancho máximo del contenedor */
+    margin: -280px auto 0;
+    /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    /* Agrega un poco de espacio alrededor del contenedor */
+    margin-left: 420px;
+    /* Mueve el contenedor un poco a la derecha */
+    margin-top: -800px;
+}
+
+#cont_card_Curso {
+    display: flex;
+    /* Usa Flexbox */
+    flex-wrap: wrap;
+    /* Envuelve las cartas cuando no haya suficiente espacio */
+    justify-content: center;
+    /* Centra las cartas horizontalmente */
+    max-width: 1300px;
+    /* Establece el ancho máximo del contenedor */
+    margin: -280px auto 0;
+    /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    /* Agrega un poco de espacio alrededor del contenedor */
+    margin-left: 420px;
+    /* Mueve el contenedor un poco a la derecha */
+    margin-top: -800px;
+}
+
+#cont_card_alumnos {
+    display: flex;
+    /* Usa Flexbox */
+    flex-wrap: wrap;
+    /* Envuelve las cartas cuando no haya suficiente espacio */
+    justify-content: center;
+    /* Centra las cartas horizontalmente */
+    max-width: 1300px;
+    /* Establece el ancho máximo del contenedor */
+    margin: -280px auto 0;
+    /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    /* Agrega un poco de espacio alrededor del contenedor */
+    margin-left: 420px;
+    /* Mueve el contenedor un poco a la derecha */
+    margin-top: -900px;
+}
+
+#cont_card_docentes {
+    display: flex;
+    /* Usa Flexbox */
+    flex-wrap: wrap;
+    /* Envuelve las cartas cuando no haya suficiente espacio */
+    justify-content: center;
+    /* Centra las cartas horizontalmente */
+    max-width: 1300px;
+    /* Establece el ancho máximo del contenedor */
+    margin: -280px auto 0;
+    /* Centra el contenedor horizontalmente */
+    padding: 20px;
+    /* Agrega un poco de espacio alrededor del contenedor */
+    margin-left: 420px;
+    /* Mueve el contenedor un poco a la derecha */
+    margin-top: -900px;
+}
 
 .card {
     width: 300px;
@@ -202,17 +289,21 @@ aside ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 40px;
     padding: 20px;
-    flex: 0 0 calc(33.33% - 80px); /* Ajusta el ancho de cada carta para que quepan tres en una fila con margen */
+    flex: 0 0 calc(33.33% - 80px);
+    /* Ajusta el ancho de cada carta para que quepan tres en una fila con margen */
 }
+
 .card img {
     width: 100%;
     border-radius: 8px;
     margin-bottom: 10px;
 }
+
 .card h2 {
     font-size: 20px;
     margin-bottom: 10px;
 }
+
 .card p {
     font-size: 16px;
     color: #666;
@@ -249,138 +340,245 @@ button:hover {
 button:active {
     transform: translateY(1px);
 }
- 
+
 /* estilos modal administrador vboton visualizar*/
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
     left: 120px;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
     /* background-color: rgb(0,0,0);  */
     /* background-color: rgba(0,0,0,0.4);  */
     /* margin-bottom: 1000px; */
     margin-top: -120px;
     border-radius: 7px;
 
-  }
- 
-  /* Modal Content/Box */
-  .modal-content {
+}
+
+/* Modal Content/Box */
+.modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
+    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 80%;
+    /* Could be more or less, depending on screen size */
     border-radius: 7px;
-  }
- 
-  /* The Close Button */
-  .close,.closeProfesor,.close,.closeModalEdit,.closeModalEstudianteCurso,.closeModalPerfil_docente,
-  .closeCurso,.closeModalPerfil_administrador,.closeModalPerfil_alumno,.closeAdmin,.closeModalVerForos,.closeModalEstudianteforo 
-  .close,.closeProfesor,.closeModalEdit,.closeModalEstudianteCurso,.closeModalPerfil_docente,.closeCurso,.closeModalPerfil_administrador,.closeModalPerfil_alumno,.closeAdmin,.closeModalVerForos,.closeModalEstudianteforo {
+}
+
+/* The Close Button */
+.close,
+.closeProfesor,
+.close,
+.closeModalEdit,
+.closeModalEstudianteCurso,
+.closeModalPerfil_docente,
+.closeCurso,
+.closeModalPerfil_administrador,
+.closeModalPerfil_alumno,
+.closeAdmin,
+.closeModalVerForos,
+.closeModalEstudianteforo .close,
+.closeProfesor,
+.closeModalEdit,
+.closeModalEstudianteCurso,
+.closeModalPerfil_docente,
+.closeCurso,
+.closeModalPerfil_administrador,
+.closeModalPerfil_alumno,
+.closeAdmin,
+.closeModalVerForos,
+.closeModalEstudianteforo {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
- 
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
 
 
-  #img_modal{
+#img_modal {
     width: 300px;
     border-radius: 8px;
     margin-bottom: 10px;
-  }
-  #contenedor_respuestas {
-    border: 1px solid black; /* 1px de ancho, sólido y de color negro */
+}
+
+#contenedor_respuestas {
+    border: 1px solid black;
+    /* 1px de ancho, sólido y de color negro */
     border-radius: 5px;
     margin-bottom: 80px;
 }
 
 
 /* formulario dentro de las cartas*/
-  #formulario_visualizar_docente,#formulario_visualizar_usuario,#formulario_visualizar_alumno,
-  #formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,
-  #formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador 
-  #formulario_visualizar_docente,#formulario_visualizar_usuario,#formulario_visualizar_docente,#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador {
-    max-width: 1000px; /* Reducir el ancho máximo del formulario */
+#formulario_visualizar_docente,
+#formulario_visualizar_usuario,
+#formulario_visualizar_alumno,
+#formulario_ver_foro_estudiante,
+#formulario_ver_foro_estudiante,
+#formulario_Ver_foros_docente,
+#formulario_config_docente,
+#formulario_perfil_alumno,
+#formulario_perfil_administrador #formulario_visualizar_docente,
+#formulario_visualizar_usuario,
+#formulario_visualizar_docente,
+#formulario_ver_foro_estudiante,
+#formulario_ver_foro_estudiante,
+#formulario_Ver_foros_docente,
+#formulario_visualizar_usuario,
+#formulario_config_docente,
+#formulario_perfil_alumno,
+#formulario_perfil_administrador {
+    max-width: 1000px;
+    /* Reducir el ancho máximo del formulario */
     margin-left: 380px;
-    padding: 20px; /* Añadir un poco de espacio alrededor del formulario */
+    padding: 20px;
+    /* Añadir un poco de espacio alrededor del formulario */
     margin-top: -400px;
 }
 
 
-#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#modalVerInfoForos,#formulario_visualizar_usuario,
-#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .mb-4 
- #formulario_visualizar_docente,#formulario_visualizar_usuario,#formulario_visualizar_docente,#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .mb-4 {
-    margin-bottom: 10px; /* Reducir el espacio entre cada campo del formulario */
+#formulario_ver_foro_estudiante,
+#formulario_ver_foro_estudiante,
+#formulario_Ver_foros_docente,
+#modalVerInfoForos,
+#formulario_visualizar_usuario,
+#formulario_config_docente,
+#formulario_perfil_alumno,
+#formulario_perfil_administrador .mb-4 #formulario_visualizar_docente,
+#formulario_visualizar_usuario,
+#formulario_visualizar_docente,
+#formulario_ver_foro_estudiante,
+#formulario_ver_foro_estudiante,
+#formulario_Ver_foros_docente,
+#formulario_visualizar_usuario,
+#formulario_config_docente,
+#formulario_perfil_alumno,
+#formulario_perfil_administrador .mb-4 {
+    margin-bottom: 10px;
+    /* Reducir el espacio entre cada campo del formulario */
 }
 
 
-#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,
-#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .block 
- #formulario_visualizar_docente,#formulario_visualizar_usuario,#formulario_visualizar_docente,#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .block {
-    margin-bottom: 5px; /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
+#formulario_ver_foro_estudiante,
+#formulario_ver_foro_estudiante,
+#formulario_Ver_foros_docente,
+#formulario_visualizar_usuario,
+#formulario_config_docente,
+#formulario_perfil_alumno,
+#formulario_perfil_administrador .block #formulario_visualizar_docente,
+#formulario_visualizar_usuario,
+#formulario_visualizar_docente,
+#formulario_ver_foro_estudiante,
+#formulario_ver_foro_estudiante,
+#formulario_Ver_foros_docente,
+#formulario_visualizar_usuario,
+#formulario_config_docente,
+#formulario_perfil_alumno,
+#formulario_perfil_administrador .block {
+    margin-bottom: 5px;
+    /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
 }
 
 
-#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,
-#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .rounded 
- #formulario_visualizar_docente,#formulario_visualizar_usuario,#formulario_visualizar_docente,#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#formulario_Ver_foros_docente,#formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador .rounded {
-    border-radius: 4px; /* Redondear los bordes de los campos de entrada */
+#formulario_ver_foro_estudiante,
+#formulario_ver_foro_estudiante,
+#formulario_Ver_foros_docente,
+#formulario_visualizar_usuario,
+#formulario_config_docente,
+#formulario_perfil_alumno,
+#formulario_perfil_administrador .rounded #formulario_visualizar_docente,
+#formulario_visualizar_usuario,
+#formulario_visualizar_docente,
+#formulario_ver_foro_estudiante,
+#formulario_ver_foro_estudiante,
+#formulario_Ver_foros_docente,
+#formulario_visualizar_usuario,
+#formulario_config_docente,
+#formulario_perfil_alumno,
+#formulario_perfil_administrador .rounded {
+    border-radius: 4px;
+    /* Redondear los bordes de los campos de entrada */
 }
 
 
 
 
 /* formulario de registro usuarios,profesor,administrador */
-#formulario_Editar_foros_docente,#formulario_registro_usuarios,#formulario_registro_foros_docente,#formulario_programar_video_docente {
+#formulario_Editar_foros_docente,
+#formulario_registro_usuarios,
+#formulario_registro_foros_docente,
+#formulario_programar_video_docente {
     margin-top: -920px;
     margin-left: 200px;
 }
 
 
 /* formulario de registro cursos */
-#formulario_Editar_foros_docente,#formulario_crear_curso,#formulario_registro_foros_docente,#formulario_programar_video_docente {
-    margin-top: -1100px;
-    margin-left: 200px;
-}
-/* formulario de registro asignatura */
-#formulario_Editar_foros_docente,#formulario_crear_Asignatura,#formulario_registro_foros_docente,#formulario_programar_video_docente {
+#formulario_Editar_foros_docente,
+#formulario_crear_curso,
+#formulario_registro_foros_docente,
+#formulario_programar_video_docente {
     margin-top: -1100px;
     margin-left: 200px;
 }
 
-#contenedor_respuestas_alumno,#contenedor_respuestasubida_estudiante,#contenedor_respuestasubida_alumno {
-    border: 1px solid black; /* 1px de ancho, sólido y de color negro */
+/* formulario de registro asignatura */
+#formulario_Editar_foros_docente,
+#formulario_registro_foros_docente,
+#formulario_programar_video_docente {
+    margin-top: -1100px;
+    margin-left: 200px;
+}
+
+/* formulario de registro asignatura */
+#formulario_crear_Asignatura {
+    margin-top: -700px;
+    margin-left: 400px;
+}
+
+#contenedor_respuestas_alumno,
+#contenedor_respuestasubida_estudiante,
+#contenedor_respuestasubida_alumno {
+    border: 1px solid black;
+    /* 1px de ancho, sólido y de color negro */
     border-radius: 5px;
     margin-bottom: 80px;
 }
-#contenedor_multimedia_respuesta_Estudiante{
+
+#contenedor_multimedia_respuesta_Estudiante {
     width: 50px;
     height: 50px;
 }
-#img_like{
+
+#img_like {
     width: 20px;
 }
 
 
 
-
 @media only screen and (min-width: 386px) and (max-width: 876px) {
     /* Estilos específicos para pantallas con una dimensión de 386x876 píxeles */
-   
+
 
 
     /* .container {
@@ -388,160 +586,325 @@ button:active {
     } */
 
     /* formulario dentro de las cartas*/
-  #formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#modalVerInfoForos,#formulario_crear_curso,#formulario_registro_usuarios,
-  #formulario_visualizar_usuario,#formulario_config_docente,#formulario_perfil_alumno,#formulario_perfil_administrador {
-    max-width: 1000px; /* Reducir el ancho máximo del formulario */
-    margin-left: 5px;
-    padding: 20px; /* Añadir un poco de espacio alrededor del formulario */
-    margin-top: 7px;
-}
+    #formulario_ver_foro_estudiante,
+    #formulario_ver_foro_estudiante,
+    #modalVerInfoForos,
+    #formulario_registro_usuarios,
+    #formulario_visualizar_usuario,
+    #formulario_config_docente,
+    #formulario_perfil_alumno,
+    #formulario_perfil_administrador {
+        max-width: 1000px;
+        /* Reducir el ancho máximo del formulario */
+        margin-left: 5px;
+        padding: 20px;
+        /* Añadir un poco de espacio alrededor del formulario */
+        margin-top: -210px;
+    }
 
 
-#formulario_ver_foro_estudiante,#formulario_ver_foro_docente,#modalVerInfoForos,#formulario_visualizar_usuario,#formulario_config_docente,
-#formulario_perfil_alumno,#formulario_perfil_administrador .mb-4 {
-    margin-bottom: 10px; /* Reducir el espacio entre cada campo del formulario */
-}
+    #formulario_crear_curso {
+        max-width: 1000px;
+        /* Reducir el ancho máximo del formulario */
+        margin-left: 5px;
+        padding: 20px;
+        /* Añadir un poco de espacio alrededor del formulario */
+        margin-top: -650px;
+    }
 
 
-#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#modalVerInfoForos,#formulario_visualizar_usuario,#formulario_config_docente,
-#formulario_perfil_alumno,#formulario_perfil_administrador .block {
-    margin-bottom: 5px; /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
-}
+    #formulario_ver_foro_estudiante,
+    #formulario_ver_foro_docente,
+    #modalVerInfoForos,
+    #formulario_visualizar_usuario,
+    #formulario_config_docente,
+    #formulario_perfil_alumno,
+    #formulario_perfil_administrador .mb-4 {
+        margin-bottom: 10px;
+        /* Reducir el espacio entre cada campo del formulario */
+    }
 
 
-#formulario_ver_foro_estudiante,#formulario_ver_foro_estudiante,#modalVerInfoForos,#formulario_visualizar_usuario,#formulario_config_docente,
-#formulario_perfil_alumno,#formulario_perfil_administrador .rounded {
-    border-radius: 4px; /* Redondear los bordes de los campos de entrada */
-}
+    #formulario_ver_foro_estudiante,
+    #formulario_ver_foro_estudiante,
+    #modalVerInfoForos,
+    #formulario_visualizar_usuario,
+    #formulario_config_docente,
+    #formulario_perfil_alumno,
+    #formulario_perfil_administrador .block {
+        margin-bottom: 5px;
+        /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
+    }
+
+
+    #formulario_ver_foro_estudiante,
+    #formulario_ver_foro_estudiante,
+    #modalVerInfoForos,
+    #formulario_visualizar_usuario,
+    #formulario_config_docente,
+    #formulario_perfil_alumno,
+    #formulario_perfil_administrador .rounded {
+        border-radius: 4px;
+        /* Redondear los bordes de los campos de entrada */
+    }
 
 
     /* formulario de registro usuarios,profesor,administrador */
-#formulario_registro_foros_docente,#formulario_Editar_foros_docente,#formulario_programar_video_docente {
-    margin-top: -800px;
-    margin-left: -700px;
+    #formulario_registro_foros_docente,
+    #formulario_Editar_foros_docente,
+    #formulario_programar_video_docente {
+        margin-top: -800px;
+        margin-left: -700px;
+
+    }
+
+    /* formulario de registro cursos */
+    #formulario_registro_foros_docente,
+    #formulario_Editar_foros_docente,
+    #formulario_programar_video_docente {
+        margin-top: -800px;
+        margin-left: 200px;
+
+    }
+
+    #formulario_registro_foros_docente {
+        margin-top: -940px;
+        margin-left: -200px;
+        width: 285px;
+        margin-left: 50px;
+        margin-top: -270px;
+    }
+
+    /* formulario de registro asignatura */
+    #formulario_crear_Asignatura,
+    #formulario_Editar_foros_docente,
+    #formulario_programar_video_docente {
+        margin-top: -940px;
+        margin-left: -200px;
+        width: 285px;
+        margin-left: 50px;
+        margin-top: -380px;
+    }
+
+    #formulario_programar_video_docente {
+        margin-top: -940px;
+        margin-left: -200px;
+        width: 285px;
+        margin-left: 50px;
+        margin-top: -450px;
+    }
+
+    /* formulario dentro de las cartas*/
+    #formulario_visualizar_usuario {
+        max-width: 500px;
+        /* Reducir el ancho máximo del formulario */
+
+        margin-left: -6px;
+        /* padding: 20px;  */
+        margin-top: 2px;
+    }
+
+
+    #formulario_visualizar_usuario .mb-4 {
+        margin-bottom: 7px;
+        /* Reducir el espacio entre cada campo del formulario */
+    }
+
+
+    #formulario_visualizar_usuario .block {
+        margin-bottom: 7px;
+        /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
+    }
+
+
+    #formulario_visualizar_usuario .rounded {
+        border-radius: 4px;
+        /* Redondear los bordes de los campos de entrada */
+    }
+
+    /* Modal Content/Box */
+    .modal-content {
+        background-color: #fefefe;
+        margin: 15% auto;
+        /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 90%;
+        /* Could be more or less, depending on screen size */
+    }
+
+    #img_modal {
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        border-radius: 8px;
+        margin-bottom: 150px;
+    }
+
+    #cont_card,
+    #cursos_asignados_cards,
+    #cursos_videoconferencias_cards,
+    #estudiante_cards_foros,
+    #cont_card_docentes,
+    #cont_card_alumnos,
+    #cont_card_Curso,
+    #cont_card_Asignatura {
+        justify-content: center;
+        /* Centra las cartas horizontalmente */
+        padding: 20px;
+        /* Agrega un poco de espacio alrededor del contenedor */
+        margin-left: 20px;
+        /* Mueve el contenedor un poco a la derecha */
+        margin-top: -400px;
+        width: 90%;
+        /* Could be more or less, depending on screen size */
+
+    }
+
+
+    #cartas_asignaturas_asignados_docente {
+        justify-content: center;
+        /* Centra las cartas horizontalmente */
+        padding: 20px;
+        /* Agrega un poco de espacio alrededor del contenedor */
+        margin-left: 20px;
+        /* Mueve el contenedor un poco a la derecha */
+        margin-top: -300px;
+        width: 90%;
+        /* Could be more or less, depending on screen size */
+
+    }
+
+    #cartas_cursos_asignados_docente {
+        justify-content: center;
+        /* Centra las cartas horizontalmente */
+        padding: 20px;
+        /* Agrega un poco de espacio alrededor del contenedor */
+        margin-left: 20px;
+        /* Mueve el contenedor un poco a la derecha */
+        margin-top: -300px;
+        width: 90%;
+        /* Could be more or less, depending on screen size */
+
+    }
+
+    #cartas_foros_docente {
+        justify-content: center;
+        /* Centra las cartas horizontalmente */
+        padding: 20px;
+        /* Agrega un poco de espacio alrededor del contenedor */
+        margin-left: 20px;
+        /* Mueve el contenedor un poco a la derecha */
+        margin-top: -300px;
+        width: 90%;
+        /* Could be more or less, depending on screen size */
+
+    }
+
+    #cartas_crear_video_docente {
+        justify-content: center;
+        /* Centra las cartas horizontalmente */
+        padding: 20px;
+        /* Agrega un poco de espacio alrededor del contenedor */
+        margin-left: 20px;
+        /* Mueve el contenedor un poco a la derecha */
+        margin-top: -300px;
+        width: 90%;
+        /* Could be more or less, depending on screen size */
+
+    }
+
+    #cartas_ver_video_docente {
+        justify-content: center;
+        /* Centra las cartas horizontalmente */
+        padding: 20px;
+        /* Agrega un poco de espacio alrededor del contenedor */
+        margin-left: 20px;
+        /* Mueve el contenedor un poco a la derecha */
+        margin-top: -300px;
+        width: 90%;
+        /* Could be more or less, depending on screen size */
+
+    }
+
+    .card {
+        width: 300px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        margin: 40px;
+        padding: 50px;
+
+
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 16px;
+        color: #666;
+    }
+
+    /* Otros estilos específicos para esta resolución */
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 0;
+        /* left: 100%; */
+        background-color: #ddd;
+        padding: 10px;
+        border-radius: 0 4px 4px 4px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        margin-left: -130px;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 120px;
+        box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        /* right: -20px; */
+        margin-right: 29px;
+        margin-top: 10px;
+    }
+
+
+    .modal {
+        display: none;
+        /* Hidden by default */
+        position: fixed;
+        /* Stay in place */
+        z-index: 1;
+        /* Sit on top */
+        left: 120px;
+        top: 0;
+        width: 100%;
+        /* Full width */
+        height: 100%;
+        /* Full height */
+        overflow: auto;
+        /* Enable scroll if needed */
+        /* background-color: rgb(0,0,0);  */
+        /* background-color: rgba(0,0,0,0.4);  */
+        /* margin-bottom: 1000px; */
+        margin-top: 100px;
+        border-radius: 7px;
+        margin-left: -120px;
+
+    }
+
+
 
 }
-
-/* formulario de registro cursos */
-#formulario_registro_foros_docente,#formulario_Editar_foros_docente,#formulario_programar_video_docente {
-    margin-top: -800px;
-    margin-left: 200px;
-
-}
-/* formulario de registro asignatura */
-#formulario_crear_Asignatura,#formulario_Editar_foros_docente,#formulario_registro_foros_docente,#formulario_programar_video_docente {
-    margin-top: -940px;
-    margin-left: -200px;
-    width: 285px;
-    margin-left: 50px;
-    margin-top: 40px;
-}
-
-
-/* formulario dentro de las cartas*/
-#formulario_visualizar_usuario {
-    max-width: 500px; /* Reducir el ancho máximo del formulario */
-    
-    margin-left: -6px;
-    /* padding: 20px;  */
-    margin-top: 2px;
-}
-
-
-#formulario_visualizar_usuario .mb-4 {
-    margin-bottom: 7px; /* Reducir el espacio entre cada campo del formulario */
-}
-
-
-#formulario_visualizar_usuario .block {
-    margin-bottom: 7px; /* Reducir el espacio entre las etiquetas de los campos y los campos de entrada */
-}
-
-
-#formulario_visualizar_usuario .rounded {
-    border-radius: 4px; /* Redondear los bordes de los campos de entrada */
-}
-
- /* Modal Content/Box */
- .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 90%; /* Could be more or less, depending on screen size */
-  }
-  #img_modal{
-    align-items: center;
-    justify-content: center;
-    width: 100px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-  
-#cont_card,#cursos_asignados_cards,#cursos_videoconferencias_cards,#cartas_foros_docente
-,#cartas_cursos_asignados_docente,#cartas_asignaturas_asignados_docente
-,#cartas_crear_video_docente,#cartas_ver_video_docente,#estudiante_cards_foros,#cont_card_docentes {
-    justify-content: center; /* Centra las cartas horizontalmente */
-    max-width: 1300px; /* Establece el ancho máximo del contenedor */
-    padding: 80px; /* Agrega un poco de espacio alrededor del contenedor */
-    margin-left: 10px; /* Mueve el contenedor un poco a la derecha */
-    margin-top: 40px;
-   
-}
-   
-.card {
-    width: 300px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-    margin: 40px;
-    padding: 50px;
-
-
-}
-.card img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-.card h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-.card p {
-    font-size: 16px;
-    color: #666;
-}
- /* Otros estilos específicos para esta resolución */
- .submenu {
-    display: none;
-    position: absolute;
-    top: 0;
-    /* left: 100%; */
-    background-color: #ddd;
-    padding: 10px;
-    border-radius: 0 4px 4px 4px;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    margin-left: -130px;
-}
-
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 120px;
-    box-shadow: 0px 6px 12px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    /* right: -20px; */
-    margin-right: 29px;
-    margin-top: 10px;
-}
-
-
-
-
-}
-
-
-
