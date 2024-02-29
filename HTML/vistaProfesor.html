@@ -26,8 +26,8 @@
           <a href="#">Cerrar sesión</a>
         </div>
         <div>
-          <strong>Mauricio Tello</strong><br>
-          <span>Profesor</span>
+          <strong id="nombreUsuario">Mauricio Tello</strong><br>
+          <span id="tipoUsuario">Profesor</span>
         </div>
       </div>
       <!-- <div class="notification-icon">
@@ -53,11 +53,12 @@
           <div class="grid grid-flow-row gap-3">
             <div class="sm:grid sm:grid-cols-2 gap-3">
               <div class="sm:col-span-1">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="foto"> Foto
+                <label class="block text-gray-700 text-sm font-bold mb-2" for="foto">
+                  Foto
                 </label>
                 <input
                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="foto_edit_perfil_docentes" type="file" placeholder="" required>
+                  id="foto" type="file" placeholder="" required>
               </div>
               <div class="sm:col-span-1">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">
@@ -75,7 +76,8 @@
             <div class="sm:grid sm:grid-cols-2 gap-3">
               <div class="sm:col-span-1">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="apellido">
-                  Apellido </label>
+                  Apellido
+                </label>
                 <input
                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="apellido_edit_perfil_docentes" type="text" placeholder="" required>
@@ -96,14 +98,16 @@
             <div class="sm:grid sm:grid-cols-2 gap-3">
               <div class="sm:col-span-1">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="direccion">
-                  Dirección </label>
+                  Dirección
+                </label>
                 <input
                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="direccion_edit_perfil_docentes" type="text" placeholder="" required>
               </div>
               <div class="sm:col-span-1">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono">
-                  Contraseña </label>
+                  Contraseña
+                </label>
                 <input
                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                   id="contraseña_edit_perfil_docentes" type="password" placeholder="" required>
@@ -115,13 +119,13 @@
 
         <!-- Botones -->
         <div class="flex items-center justify-between">
-          <button
+          <button id="BtnGuardarMiPerfil"
             class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
             type="button">
             Guardar
           </button>
 
-          <button
+          <button id="BtnCancelar"
             class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
             type="button">
             Cancelar
@@ -167,7 +171,7 @@
   </div>
 
 
-  <!-- <div id="formulario_registro_foros_docente" class="flex justify-center items-center h-screen">
+  <div id="formulario_registro_foros_docente" class="flex justify-center items-center h-screen">
     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
       <h2 class="text-2xl mb-4 text-center font-bold">Registro foros</h2>
 
@@ -242,25 +246,25 @@
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="nya" type="file" placeholder="Ingresar la foto" required />
+            id="foto" type="file" placeholder="Ingresar la foto" required />
         </div>
       </div>
 
       <div class="flex items-center justify-between">
-        <button
+        <button id="BTnREgistrarForo"
           class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
           type="button">
           Registrarse
         </button>
 
-        <button
+        <button id="BtnCancelar"
           class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
           type="button">
           Cancelar
         </button>
       </div>
     </form>
-  </div> -->
+  </div>
 
   <!-- cartas de asignaturas asignados -->
   <div id="cartas_asignaturas_asignados_docente">
@@ -392,13 +396,13 @@
       </div>
       <!-- Botones -->
       <div class="flex items-center justify-between">
-        <button
+        <button id="BtnActualizarForo"
           class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
           type="button">
           Actualizar
         </button>
 
-        <button
+        <button id="BtnCancelar"
           class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
           type="button">
           Cancelar
@@ -412,7 +416,7 @@
   <!-- Agregar más campos aquí según sea necesario -->
   </div>
 
-  
+
 
 
   <!-- cartas de ver videoconferencias -->
@@ -471,13 +475,13 @@
 
       <!-- Botones -->
       <div class="flex items-center justify-between">
-        <button
+        <button id="BtnGuardarVideoConferencia"
           class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
           type="button">
           Guardar
         </button>
 
-        <button
+        <button id="BtnCancelar"
           class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
           type="button">
           Cancelar
@@ -497,9 +501,8 @@
     <!-- ver información de los foros -->
     <div class="card">
       <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
-      <h2>Foro</h2><br>
+      <h2 id="Nombre_Foro" >Foro</h2><br>
       <p>DESCRIPCIÓN_DE_FORO</p><br>
-      <p>Info foro</p><br>
       <!-- <button class="button">Visualizar</button> -->
       <button id="buttonVerInfoForos" class="button">Ver Foro</button>
 
@@ -510,7 +513,7 @@
         <div class="modal-content">
           <span class="closeModalVerForos">&times;</span>
           <img id="img_modal" src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
-          <h2>Estudiante</h2><br>
+          <h2>Foro</h2><br>
           <p>Grado</p><br>
           <form id="formulario_Ver_foros_docente"
             class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
@@ -623,17 +626,17 @@
                 type="button">
                 Respuestas
               </button> -->
-              <button
+              <button id="cambiarEstadoForo"
                 class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
                 type="button">
                 cambiar estado
               </button>
-              <button
+              <button id="BtnEditarForo"
                 class="bg-yellow-300 shadow-lg shadow-yellow-300/50 ... hover:bg-yellow-500 shadow-lg shadow-yellow-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-                type="button"id="btn_editar_foros">
+                type="button" id="btn_editar_foros">
                 Editar
               </button>
-              <button
+              <button id="BtnEliminarForo"
                 class="bg-red-300 shadow-lg shadow-red-300/50 ... hover:bg-red-500 shadow-lg shadow-red-500/50 ...  text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
                 type="button" id="btn_eliminar_foros">
                 Eliminar
@@ -646,38 +649,40 @@
 
 
 
-        <div id="contenedor_Ver_RespuestasForo"class="modal-content">
-          <!-- <label>Comentario</label><br> -->
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
-            Titulo
-          </label><br>
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
-            Fecha inicio
-          </label><br>
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
-            Fecha final
-          </label><br>
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
-            Comentario
-          </label><br>
+      <div id="contenedor_Ver_RespuestasForo" class="modal-content">
+        <!-- <label>Comentario</label><br> -->
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+          Titulo
+        </label><br>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+          Fecha inicio
+        </label><br>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+          Fecha final
+        </label><br>
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
+          Comentario
+        </label><br>
 
         <div id="contenedor_multimedia_respuesta_Estudiante">
-            <img src="../images/vector.jpg" alt="">
+          <img src="../images/vector.jpg" alt="">
         </div>
         <br>
-        <img id="img_like" src="../images/like.png" ><br>
+        <img id="img_like" src="../images/like.png"><br>
         <form>
-        <input required class="border border-gray-300 rounded w-full p-2" type="text" placeholder="Calificación"><br><br>
-        <input  class="border border-gray-300 rounded w-full p-2" type="text" placeholder="Comentario docente"><br><br>
+          <input required class="border border-gray-300 rounded w-full p-2" type="text"
+            placeholder="Calificación"><br><br>
+          <input class="border border-gray-300 rounded w-full p-2" type="text" placeholder="Comentario docente"><br><br>
 
-        <button class="bg-green-300 hover:bg-green-500 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        type="submit" id="btn_enviar_calificacion">
-        Enviar calificación
-    </button>
-  </form>
-  </div>
+          <button
+            class="bg-green-300 hover:bg-green-500 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit" id="btn_enviar_calificacion">
+            Enviar calificación
+          </button>
+        </form>
+      </div>
 
-  <!-- <div id="contenedor_Ver_RespuestasForo"class="modal-content">
+      <!-- <div id="contenedor_Ver_RespuestasForo"class="modal-content">
     <label>Comentario</label><br>
         <div id="contenedor_multimedia_respuesta_Estudiante">
             <img src="../images/vector.jpg" alt="">
@@ -690,7 +695,7 @@
         Comentar
     </button>
 </div> -->
-<!-- </div> -->
+      <!-- </div> -->
 
 
 

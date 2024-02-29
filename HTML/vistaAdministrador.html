@@ -12,6 +12,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body>
   <header style="display: flex; justify-content: space-between; align-items: center;">
     <h2>Sección Administrador</h2>
@@ -23,22 +24,13 @@
           <a href="#">Cerrar sesión</a>
         </div>
         <div>
-          <strong>German Cano</strong><br>
-          <span>Administrador</span>
+          <strong id="nombreUsuario">German Cano</strong><br>
+          <span id="tipoUsuario">Administrador</span>
         </div>
       </div>
-      <!-- <div class="notification-icon">
-                <img src="images/campana.png" alt="Icono de campana" style="width: 40px; height: 40px; border-radius: 50%;">
-            </div> -->
+
     </div>
   </header>
-  <!-- <div id="userMenu" style="display: none;">
-        <ul>
-            <li>Opción 1</li>
-            <li>Opción 2</li>
-            <li>Opción 3</li>
-        </ul>
-    </div> -->
   <aside id="menu">
     <br>
     <br>
@@ -69,29 +61,28 @@
   </aside>
 
 
-
   <div id="cont_card_docentes">
     <div class="card">
       <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
       <h2>Docente</h2><br>
       <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
-      
-            <label class="block text-gray-700 text-sm font-bold mb-2">Tipo de documento</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Número de documento</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Foto</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Apellido</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Edad</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Dirección</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Correo institucional</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Correo personal</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Tipo de usuario</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Profesión</label>
+
+      <label id="tipoDocumento" class="block text-gray-700 text-sm font-bold mb-2">Tipo de documento</label>
+      <label id="numeroDocumento" class="block text-gray-700 text-sm font-bold mb-2">Número de documento</label>
+      <label id="foto" class="block text-gray-700 text-sm font-bold mb-2">Foto</label>
+      <label id="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+      <label id="apellido" class="block text-gray-700 text-sm font-bold mb-2">Apellido</label>
+      <label id="edad" class="block text-gray-700 text-sm font-bold mb-2">Edad</label>
+      <label id="direccion" class="block text-gray-700 text-sm font-bold mb-2">Dirección</label>
+      <label id="telefono" class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
+      <label id="correoInstitucional" class="block text-gray-700 text-sm font-bold mb-2">Correo institucional</label>
+      <label id="correoPersonal" class="block text-gray-700 text-sm font-bold mb-2">Correo personal</label>
+      <label id="contaseña" class="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
+      <label id="tipoUsuario" class="block text-gray-700 text-sm font-bold mb-2">Tipo de usuario</label>
+      <label id="profesion" class="block text-gray-700 text-sm font-bold mb-2">Profesión</label>
     </div>
   </div>
-  
+
   <!-- The Modal -->
   <div id="modal_perfil_administrador" class="modal">
 
@@ -138,7 +129,7 @@
                   id="apellido_edit_perfil_docentes" type="text" placeholder="" required>
               </div>
               <div class="sm:col-span-1">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="Email">
+                <label id="email" class="block text-gray-700 text-sm font-bold mb-2" for="Email">
                   Email
                 </label>
                 <input
@@ -172,13 +163,13 @@
 
         <!-- Botones -->
         <div class="flex items-center justify-between">
-          <button
+          <button id="BtnGuardarInfoPerfil"
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="button">
             Guardar
           </button>
 
-          <button
+          <button id="BtnCancelar"
             class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="button">
             Cancelar
@@ -187,90 +178,46 @@
       </form>
     </div>
   </div>
-</div>
+  </div>
 
-
-  
-
- 
-
- 
-
-
-
-
-
- <div id="cont_card_Curso">
-  <div class="card">
-                <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
-                <h2>Curso</h2><br>
-                <p>1001</p><br>
-            </div>
+  <div id="cont_card_Curso">
+    <div class="card">
+      <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+      <h2 id="curso">Curso</h2><br>
+    </div>
 
   </div>
 
-  
-<div id="cont_card_Asignatura">
-  <div class="card">
-    <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
-    <h2>Asinatura</h2><br>
-    <p>Español</p><br>
-</div>
+  <div id="cont_card_Asignatura">
+    <div class="card">
+      <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+      <h2 id="asignatura">Asinatura</h2><br>
+    </div>
 
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   <div id="cont_card_alumnos">
     <div class="card">
       <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
-      <h2>Alumnos</h2><br>
-      <p>ALUMNOS.</p><br>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Número de documento</label>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Foto</label>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Apellido</label>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Edad</label>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Dirección</label>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Correo institucional</label>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Correo personal</label>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Tipo de usuario</label>
-      <label class="block text-gray-700 text-sm font-bold mb-2">Profesión</label>
-  
-    
-  
+      <h2 id="alumno">Alumno</h2><br>
+      <label id="numeroDocumento" class="block text-gray-700 text-sm font-bold mb-2">Número de documento</label>
+      <label id="foto" class="block text-gray-700 text-sm font-bold mb-2">Foto</label>
+      <label id="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+      <label id="apellido" class="block text-gray-700 text-sm font-bold mb-2">Apellido</label>
+      <label id="edad" class="block text-gray-700 text-sm font-bold mb-2">Edad</label>
+      <label id="direccion" class="block text-gray-700 text-sm font-bold mb-2">Dirección</label>
+      <label id="telefono" class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
+      <label id="correoInstitucional" class="block text-gray-700 text-sm font-bold mb-2">Correo institucional</label>
+      <label id="correoPersonal" class="block text-gray-700 text-sm font-bold mb-2">Correo personal</label>
+      <label id="contraseña" class="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
+      <label id="tipoUsuario" class="block text-gray-700 text-sm font-bold mb-2">Tipo de usuario</label>
+      <label id="profesion" class="block text-gray-700 text-sm font-bold mb-2">Profesión</label>
     </div>
-  </div> 
+  </div>
+
+  <!-- formulario de registro -->
 
 
-              
-  
-
-
-
-                <!-- formulario de registro -->
-
-  
   <div id="formulario_registro_usuarios" class="flex justify-center items-center h-screen">
     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
       <!-- Título del formulario -->
@@ -284,7 +231,7 @@
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="documentType" type="text" placeholder="Tipo de documento" />
+            id="tipoDocumento" type="text" placeholder="Tipo de documento" />
         </div>
         <div class="mb-4 md:ml-2 md:w-1/2">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="documentNumber">
@@ -292,7 +239,7 @@
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="documentNumber" type="text" placeholder="Número de documento" />
+            id="numeroDocumento" type="text" placeholder="Número de documento" />
         </div>
       </div>
 
@@ -304,7 +251,7 @@
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="name" type="text" placeholder="Nombre" />
+            id="nombre" type="text" placeholder="Nombre" />
         </div>
         <div class="mb-4 md:ml-2 md:w-1/2">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="lastName">
@@ -312,7 +259,7 @@
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="lastName" type="text" placeholder="Apellido" />
+            id="apellido" type="text" placeholder="Apellido" />
         </div>
       </div>
 
@@ -324,7 +271,7 @@
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="age" type="text" placeholder="Edad" />
+            id="edad" type="text" placeholder="Edad" />
         </div>
         <div class="mb-4 md:ml-2 md:w-1/2">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="address">
@@ -332,7 +279,7 @@
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="address" type="text" placeholder="Dirección" />
+            id="" type="text" placeholder="Dirección" />
         </div>
       </div>
 
@@ -344,7 +291,7 @@
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="phone" type="text" placeholder="Teléfono" />
+            id="telefono" type="text" placeholder="Teléfono" />
         </div>
         <div class="mb-4 md:ml-2 md:w-1/2">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="institutionalEmail">
@@ -352,7 +299,7 @@
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="institutionalEmail" type="text" placeholder="Correo institucional" />
+            id="correoInstitucional" type="text" placeholder="Correo institucional" />
         </div>
       </div>
 
@@ -364,7 +311,7 @@
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="personalEmail" type="text" placeholder="Correo personal" />
+            id="correoPersonal" type="text" placeholder="Correo personal" />
         </div>
         <div class="mb-4 md:ml-2 md:w-1/2">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="userType">
@@ -372,7 +319,7 @@
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="userType" type="text" placeholder="Tipo de usuario" />
+            id="tipoUsuario" type="text" placeholder="Tipo de usuario" />
         </div>
       </div>
 
@@ -384,7 +331,7 @@
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="password" type="password" placeholder="Contraseña" />
+            id="contraseña" type="password" placeholder="Contraseña" />
         </div>
         <div className="mb-4 md:mr-2 md:w-1/2">
           <label className="block text-gray-700 text-sm font-bold mb-2" for="nya">
@@ -392,7 +339,7 @@
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="nya" type="file" placeholder="Ingresar la foto" required />
+            id="foto" type="file" placeholder="Ingresar la foto" required />
         </div>
 
 
@@ -401,13 +348,13 @@
 
       <!-- Botones -->
       <div class="flex items-center justify-between">
-        <button
+        <button id="BtnRegistrarUsuario"
           class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
           type="button">
           Registrarse
         </button>
 
-        <button
+        <button id="BtnCancelar"
           class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
           type="button">
           Cancelar
@@ -417,7 +364,7 @@
   </div>
 
 
-  
+
   <!-- Formulario -->
   <div id="formulario_crear_curso" class="flex justify-center items-center h-screen">
     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
@@ -427,32 +374,32 @@
       <!-- Primer par de campos -->
       <div class="mb-4 flex flex-col md:flex-row">
         <div class="mb-4 md:mr-2 md:w-1/2">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="documentType">
+          <labelclass="block text-gray-700 text-sm font-bold mb-2" for="documentType">
             Nombre Curso
-          </label>
-          <input
-            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="documentType" type="text" placeholder="Tipo de documento" />
+            </label>
+            <input
+              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="nombreCurso" type="text" placeholder="Tipo de documento" />
         </div>
         <div class="mb-4 md:ml-2 md:w-1/2">
           <label class="block text-gray-700 text-sm font-bold mb-2" for="documentNumber">
-            Descriopcion
+            Descripcion
           </label>
           <input
             class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="documentNumber" type="text" placeholder="Número de documento" />
+            id="descripcionCurso" type="text" placeholder="Número de documento" />
         </div>
       </div>
 
       <!-- Botones -->
       <div class="flex items-center justify-between">
-        <button
+        <button id="BtnRegistrarCurso"
           class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
           type="button">
           Registrarse
         </button>
 
-        <button
+        <button id="BtnCancelar"
           class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
           type="button">
           Cancelar
@@ -467,24 +414,27 @@
       <div class="mb-4">
         <div class="grid grid-flow-row sm:grid-flow-col gap-3">
           <div class="sm:col-span-4 justify-center">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="nya"> Nombre asignatura </label>
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="nya">
+              Nombre asignatura
+            </label>
             <input
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="nombre_asignatura" type="text" placeholder="" required>
           </div>
           <br>
           <div class="flex items-center justify-between">
-            <button
+            <button id="BtnRegistrarAsignatura"
               class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
               type="button">
               Registrarse
             </button>
+            <button id="BtnCancelar"
+              class=" hover:bg-blue-500 shadow-lg shadow-blue-600/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline bg-blue-300 shadow-lg shadow-blue-300/50 ..."
+              type="button">
+              Cancelar
+            </button>
     </form>
   </div>
-
-
-
- 
 
   <!-- sweealert de confirmacion -->
   <!-- <script>
