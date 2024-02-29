@@ -182,8 +182,8 @@ aside ul li a:hover {
 #cont_card,#cursos_asignados_cards,#cursos_videoconferencias_cards,#cartas_foros_docente
 ,#cartas_cursos_asignados_docente,#cartas_asignaturas_asignados_docente
 ,#cartas_crear_video_docente,#cartas_ver_video_docente,#estudiante_cards_foros,
-#cont_card_docentes,#cont_card_administradores,#cont_card_curso,#cont_card_Asignatura
-,#cartas_crear_video_docente,#cartas_ver_video_docente,#estudiante_cards_foros,#cont_card_docentes,#cont_card_administradores,#cont_card_Curso,#cont_card_Asignatura {
+#cont_card_docentes,#cont_card_alumnos,#cont_card_curso,#cont_card_Asignatura
+,#cartas_crear_video_docente,#cartas_ver_video_docente,#estudiante_cards_foros,#cont_card_docentes,#cont_card_alumnos,#cont_card_Curso,#cont_card_Asignatura {
     display: flex; /* Usa Flexbox */
     flex-wrap: wrap; /* Envuelve las cartas cuando no haya suficiente espacio */
     justify-content: center; /* Centra las cartas horizontalmente */

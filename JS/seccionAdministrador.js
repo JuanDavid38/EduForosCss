@@ -21,18 +21,18 @@ document.addEventListener("DOMContentLoaded", function () {
     $("#formulario_crear_Asignatura").hide();
 
     // ocultar cartas
-    $("#cont_card_administradores").hide();
+    $("#cont_card_alumnos").hide();
     $("#cont_card_Curso").hide();
     $("#cont_card_Asignatura").hide();
+    $("#cont_card_alumnos").hide();
 
   });
+  
 
 
-
-  $("#cont_card_administradores").hide();
-  $("#Mostrar_administradores").on("click", function () {
-    $("#cont_card_administradores").show();
-    $("#cont_card_administradores").show();
+  $("#cont_card_alumnos").hide();
+  $("#Mostrar_alumnos").on("click", function () {
+    $("#cont_card_alumnos").show();
     // todos los formularios ocultos
     $("#formulario_registro_usuarios").hide();
     $("#formulario_crear_curso").hide();
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ocultar cartas
     $("#cont_card_docentes").hide();
-    $("#cont_card_administradores").hide();
+    $("#cont_card_alumnos").hide();
  $("#cont_card_Asignatura").hide();
 
   });
@@ -70,8 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ocultar cartas
     $("#cont_card_docentes").hide();
-    $("#cont_card_administradores").hide();
- $("#cont_card_Asignatura").hide();
+    $("#cont_card_alumnos").hide();
     
   });
   // formularios administrador
@@ -86,9 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ocultar cartas
     $("#cont_card_docentes").hide();
-    $("#cont_card_administradores").hide();
+    $("#cont_card_alumnos").hide();
     $("#cont_card_Curso").hide();
-    $("#cont_card_administradores").hide();
 
 
   });
@@ -101,9 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ocultar cartas
     $("#cont_card_docentes").hide();
-    $("#cont_card_administradores").hide();
+    $("#cont_card_alumnos").hide();
     $("#cont_card_Curso").hide();
-    $("#cont_card_administradores").hide();
+   
 
 
   });
@@ -118,9 +116,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ocultar cartas
     $("#cont_card_docentes").hide();
-    $("#cont_card_administradores").hide();
+    $("#cont_card_alumnos").hide();
     $("#cont_card_Curso").hide();
-    $("#cont_card_administradores").hide();
+    $("#cont_card_alumnos").hide();
+    
 
 
   });
@@ -183,74 +182,11 @@ window.onclick = function (event) {
 
 
 
-       // funcionamiento del modal visualizar DOCENTE, sección administrador
-  // Get the modal
-//   var modal = document.getElementById("modalVisualizarDocente");
-
-// var btn = document.getElementById("buttonVisualizarDocente");
-
-// var span = document.getElementsByClassName("closeProfesor")[0];
-
-// btn.onclick = function () {
-//   modal.style.display = "block";
-// }
-
-// span.onclick = function () {
-//   modal.style.display = "none";
-// }
-
-// window.onclick = function (event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
 
 
 
-// funcionamiento del modal visualizar administrador, sección administrador
-  // Get the modal
-//   var modal = document.getElementById("modalVisualizarAdministrador");
-
-// var btn = document.getElementById("buttonVisualizarAdministrador");
-
-// var span = document.getElementsByClassName("closeAdmin")[0];
-
-// btn.onclick = function () {
-//   modal.style.display = "block";
-// }
-
-// span.onclick = function () {
-//   modal.style.display = "none";
-// }
-
-// window.onclick = function (event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
 
 
-       // funcionamiento del modal visualizar curso, sección administrador
-  // Get the modal
-//   var modal = document.getElementById("modalVisualizarCurso");
-
-// var btn = document.getElementById("buttonVisualizarCurso");
-
-// var span = document.getElementsByClassName("closeCurso")[0];
-
-// btn.onclick = function () {
-//   modal.style.display = "block";
-// }
-
-// span.onclick = function () {
-//   modal.style.display = "none";
-// }
-
-// window.onclick = function (event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   }
-// }
 
 
 });

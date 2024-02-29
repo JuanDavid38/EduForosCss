@@ -48,7 +48,8 @@
         <div class="submenu">
           <a id="Registrar_usuarios">Registrar usuarios</a><br><br>
           <a id="Mostrar_docentes">Mostrar profesores</a><br><br>
-          <a id="Mostrar_administradores">Mostrar Administradores</a>
+          <a id="Mostrar_alumnos">Mostrar Alumnos</a><br><br>
+
         </div>
       </li><br><br>
       <li><a>Cursos</a>
@@ -66,6 +67,31 @@
 
     </ul>
   </aside>
+
+
+
+  <div id="cont_card_docentes">
+    <div class="card">
+      <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+      <h2>Docente</h2><br>
+      <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
+      
+            <label class="block text-gray-700 text-sm font-bold mb-2">Tipo de documento</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Número de documento</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Foto</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Apellido</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Edad</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Dirección</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Correo institucional</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Correo personal</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Tipo de usuario</label>
+            <label class="block text-gray-700 text-sm font-bold mb-2">Profesión</label>
+    </div>
+  </div>
+  
   <!-- The Modal -->
   <div id="modal_perfil_administrador" class="modal">
 
@@ -213,7 +239,28 @@
 
 
 
-
+  <div id="cont_card_alumnos">
+    <div class="card">
+      <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
+      <h2>Alumnos</h2><br>
+      <p>ALUMNOS.</p><br>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Número de documento</label>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Foto</label>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Apellido</label>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Edad</label>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Dirección</label>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Correo institucional</label>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Correo personal</label>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Tipo de usuario</label>
+      <label class="block text-gray-700 text-sm font-bold mb-2">Profesión</label>
+  
+    
+  
+    </div>
+  </div> 
 
 
               
@@ -369,42 +416,8 @@
     </form>
   </div>
 
-  <div id="cont_card_administradores">
-    <div class="card">
-      <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
-      <h2>Administrador</h2><br>
-      <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
-      <button id="buttonVisualizarAdministrador"
-        class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-        type="button">Visualizar</button>
-  
-      <div id="modalVisualizarAdministrador" class="modal">
-  
-        <div class="modal-content">
-          <span class="closeAdmin">&times;</span>
-          <img id="img_modal" src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
-          <h2>Administrador</h2><br>
-          <p>Admin</p><br>
-          <label class="block text-gray-700 text-sm font-bold mb-2">Tipo de documento</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Número de documento</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Foto</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Apellido</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Edad</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Dirección</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Correo institucional</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Correo personal</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Tipo de usuario</label>
-<label class="block text-gray-700 text-sm font-bold mb-2">Profesión</label>
 
-        </div>
   
-      </div>
-  
-    </div>
-  </div> 
   <!-- Formulario -->
   <div id="formulario_crear_curso" class="flex justify-center items-center h-screen">
     <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-full md:w-3/4 lg:w-2/3 xl:w-1/2">
@@ -470,46 +483,8 @@
   </div>
 
 
-  <div id="cont_card_docentes">
-    <div class="card">
-      <img src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
-      <h2>Docente</h2><br>
-      <p>DESCRIPCIÓN_DE_LA_CARTA</p><br>
-      <button id="buttonVisualizarDocente"
-        class="bg-green-300 shadow-lg shadow-green-300/50 ... hover:bg-green-500 shadow-lg shadow-green-500/50 ... text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
-        type="button">Visualizar</button>
-  
-      <div id="modalVisualizarDocente" class="modal">
-  
-        <div class="modal-content">
-          <span class="closeProfesor">&times;</span>
-          <img id="img_modal" src="../images/vector.jpg" alt="TÍTULO_DE_LA_IMAGEN">
-          <h2>Estudiante</h2><br>
-            <p>Grado</p><br>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Tipo de documento</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Número de documento</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Foto</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Nombre</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Apellido</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Edad</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Dirección</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Teléfono</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Correo institucional</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Correo personal</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Contraseña</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Tipo de usuario</label>
-            <label class="block text-gray-700 text-sm font-bold mb-2">Profesión</label>
-  
-  
-  
-        </div>
-  
-      </div>
-  
-    </div>
-  </div>
-  
 
+ 
 
   <!-- sweealert de confirmacion -->
   <!-- <script>
