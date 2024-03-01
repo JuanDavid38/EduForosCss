@@ -8,7 +8,7 @@ body {
 
 
 header {
-    background-color: #333;
+    background-color: #134e4a;
     color: #fff;
     padding: 20px;
     width: 100%;
@@ -102,7 +102,7 @@ aside ul li a:hover {
 
 /* Estilos para el menú */
 #menu {
-    background-color: #aaa;
+    background-color: #4ade80;
     height: 883px;
     /* padding: 20px;
     width: 200px;
@@ -137,7 +137,7 @@ aside ul li a:hover {
     /* position: absolute; */
     top: 0;
     left: 100%;
-    background-color: #ddd;
+    background-color: #34d399;
     padding: 10px;
     border-radius: 0 4px 4px 4px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
